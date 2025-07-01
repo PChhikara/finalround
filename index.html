@@ -673,7 +673,7 @@ function updateSentenceStructure() {
       } else if (part.startsWith("[")) {
         const input = document.createElement("input");
         input.type = "text";
-      input.placeholder = "add something about " + part.slice(1, -1);
+      input.placeholder = "" + part.slice(1, -1);
       input.style.width = "320px";
         container.appendChild(input);
       } else {
