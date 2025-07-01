@@ -181,22 +181,10 @@ const gaOptions = {
 const confirmedGAs = [];
 const sentenceStructures = {
   "Knowledge/Understanding-Concept": {
-    template: ["Graduates will be able to", "[verb]", "[core concepts/theories/principles]", "in", "[discipline]"],
+    template: ["Graduates will be able to", "[verb]", "[core concepts/theories/principles]", "in", "[the chosen discipline and, if applicable, its interdisciplinary contexts]"],
     verbs: ["demonstrate","understand", "grasp"]
   },
-  "DEVELOPMENTAL-Knowledge/Understanding-Concept": {
-    template: ["Graduates will", "[verb]", "a foundational understanding of","[conceptual knowledge]", "in", "[discipline]"],
-    verbs: ["demonstrate","understand", "grasp"]
-  },
-  "ASPIRATIONAL-Knowledge/Understanding-Concept": {
-    template: ["Graduates will", "[verb]", "and appreciate the role of", "[conceptual knowledge]", "in", "[discipline]"],
-    verbs: ["demonstrate","understand", "grasp"]
-  },
-  "INTERDISCIPLINARY-Knowledge/Understanding-Concept": {
-    template: ["Graduates will", "[verb]", "conceptual knowledge from", "[discipline]", "and relate it to", "[other domain/real-world problems]"],
-    verbs: ["demonstrate","understand", "grasp"]
-  },
-    "STANDARD-Knowledge/Understanding-Procedure": {
+    "Knowledge/Understanding-Procedure": {
     template: ["Graduates will be able to", "[verb]", "standard", "[procedures/methods]", "for solving domain-relevant problems."],
     verbs: ["apply", "perform", "demonstrate"]
   },
@@ -518,10 +506,7 @@ const sentenceStructures = {
   }
 };
   const calculusExamples = {
-  "STANDARD-Knowledge/Understanding-Concept": "Graduates will be able to demonstrate core concepts and theorems in pure and applied mathematics.",
-  "DEVELOPMENTAL-Knowledge/Understanding-Concept": "Graduates will grasp a foundational understanding of mathematical logic and number theory in the field of mathematics.",
-  "ASPIRATIONAL-Knowledge/Understanding-Concept": "Graduates will understand and appreciate the role of set theory and mathematical proofs in the foundations of mathematics.",
-  "INTERDISCIPLINARY-Knowledge/Understanding-Concept": "Graduates will apply procedural methods from linear algebra and calculus to its applications in modeling and interpreting systems in physics and data science.",
+  "Knowledge/Understanding-Concept": "Graduates will be able to understand foundational mathematical concepts and principles in pure and applied mathematics.",
   "STANDARD-Knowledge/Understanding-Procedure": "GGraduates will be able to apply standard mathematical procedures such as integration techniques and matrix operations for solving mathematical problems.",
   "DEVELOPMENTAL-Knowledge/Understanding-Procedure": "Graduates will perform a foundational ability to use algebraic and calculus-based procedures to approach mathematical tasks.",
   "ASPIRATIONAL-Knowledge/Understanding-Procedure": "Graduates will demonstrate and appreciate the role of algorithmic and procedural knowledge in applying mathematics to real-world challenges.",
