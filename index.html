@@ -167,31 +167,21 @@ Tool designed by <strong>Praveen Chhikara</strong>
 </section>
 <script>
 const gaOptions = {
-  "Knowledge/Understanding-Concept": ["STANDARD-Knowledge/Understanding-Concept", "DEVELOPMENTAL-Knowledge/Understanding-Concept", "ASPIRATIONAL-Knowledge/Understanding-Concept" , "INTERDISCIPLINARY-Knowledge/Understanding-Concept"],
-  "Knowledge/Understanding-Procedure": ["STANDARD-Knowledge/Understanding-Procedure", "DEVELOPMENTAL-Knowledge/Understanding-Procedure", "ASPIRATIONAL-Knowledge/Understanding-Procedure", "INTERDISCIPLINARY-Knowledge/Understanding-Procedure"],
-  "Knowledge/Understanding-Linking Ideas": ["STANDARD-Knowledge/Understanding-Linking Ideas", "DEVELOPMENTAL-Knowledge/Understanding-Linking Ideas", "ASPIRATIONAL-Knowledge/Understanding-Linking Ideas", "INTERDISCIPLINARY-Knowledge/Understanding-Linking Ideas"],
-  "Skill-Task Completion": ["STANDARD-Skill-Task Completion", "DEVELOPMENTAL-Skill-Task Completion", "ASPIRATIONAL-Skill-Task Completion", "INTERDISCIPLINARY-Skill-Task Completion"],
-  "Skill-Analyze": ["STANDARD-Skill-Analyze", "DEVELOPMENTAL-Skill-Analyze", "ASPIRATIONAL-Skill-Analyze", "INTERDISCIPLINARY-Skill-Analyze"],
-  "Skill-Select/Evaluate": ["STANDARD-Skill-Select/Evaluate", "DEVELOPMENTAL-Skill-Select/Evaluate", "ASPIRATIONAL-Skill-Select/Evaluate", "INTERDISCIPLINARY-Skill-Select/Evaluate"],
-  "Application of Knowledge": ["STANDARD-Application of Knowledge", "DEVELOPMENTAL-Application of Knowledge", "ASPIRATIONAL-Application of Knowledge", "INTERDISCIPLINARY-Application of Knowledge"],
-  "Application of Skill": ["STANDARD-Application of Skill", "DEVELOPMENTAL-Application of Skill", "ASPIRATIONAL-Application of Skill", "INTERDISCIPLINARY-Application of Skill"],
-"Gen-Communication-Write/Oral/Read/Listen": ["STANDARD-Gen-Communication-Write/Oral/Read/Listen", "DEVELOPMENTAL-Gen-Communication-Write/Oral/Read/Listen", "ASPIRATIONAL-Gen-Communication-Write/Oral/Read/Listen", "INTERDISCIPLINARY-Gen-Communication-Write/Oral/Read/Listen"],
-      "Gen-Critical/Judge/Responsibility": ["STANDARD-Gen-Critical/Judge/Responsibility", "DEVELOPMENTAL-Gen-Critical/Judge/Responsibility", "ASPIRATIONAL-Gen-Critical/Judge/Responsibility", "INTERDISCIPLINARY-Gen-Critical/Judge/Responsibility"],
-      "Gen-IndependentLearning/IdentifyProblems": ["STANDARD-Gen-IndependentLearning/IdentifyProblems", "DEVELOPMENTAL-Gen-IndependentLearning/IdentifyProblems", "ASPIRATIONAL-Gen-IndependentLearning/IdentifyProblems", "INTERDISCIPLINARY-Gen-IndependentLearning/IdentifyProblems"],
-      "Empl-Job readiness": ["STANDARD-Empl-Job readiness", "DEVELOPMENTAL-Empl-Job readiness", "ASPIRATIONAL-Empl-Job readiness", "INTERDISCIPLINARY-Empl-Job readiness"],
-    "Empl-Group work": ["STANDARD-Empl-Group work", "DEVELOPMENTAL-Empl-Group work", "ASPIRATIONAL-Empl-Group work", "INTERDISCIPLINARY-Empl-Group work"],
-    "Empl-Responsible for self-work": ["STANDARD-Empl-Responsible for self-work", "DEVELOPMENATAL-Empl-Responsible for self-work", "ASPIRATIONAL-Empl-Responsible for self-work", "INTERDISCIPLINARY-Empl-Responsible for self-work"],
-"Ethic-Practice-Constitution/Human/Moral": ["STANDARD-Ethic-Practice-Constitution/Human/Moral", "DEVELOPMENTAL-Ethic-Practice-Constitution/Human/Moral", "ASPIRATIONAL-Ethic-Practice-Constitution/Human/Moral", "INTERDISCIPLINARY-Ethic-Practice-Constitution/Human/Moral"],
-    "StudentContri-Asking Questions": ["STANDARD-StudentContri-Asking Questions", "DEVELOPMENTAL-StudentContri-Asking Questions", "ASPIRATIONAL-StudentContri-Asking Questions", "INTERDISCIPLINARY-StudentContri-Asking Questions"],
-    "StudentContri-Group Tasks": ["STANDARD-StudentContri-Group Tasks", "DEVELOPMENTAL-StudentContri-Group Tasks", "ASPIRATIONAL-StudentContri-Group Tasks", "INTERDISCIPLINARY-StudentContri-Group Tasks"],
-    "StudentContri-Risk Taking": ["STANDARD-StudentContri-Risk Taking", "DEVELOPMENTAL-StudentContri-Risk Taking", "ASPIRATIONAL-StudentContri-Risk Taking", "INTERDISCIPLINARY-StudentContri-Risk Taking"],
-    "SubjectEvol-Over Time": ["STANDARD-SubjectEvol-Over Time", "DEVELOPMENTAL-SubjectEvol-Over Time", "ASPIRATIONAL-SubjectEvol-Over Time", "INTERDISCIPLINARY-SubjectEvol-Over Time"],
-"SubjectEvol-Human": ["STANDARD-SubjectEvol-Human", "DEVELOPMENTAL-SubjectEvol-Human", "ASPIRATIONAL-SubjectEvol-Human", "INTERDISCIPLINARY-SubjectEvol-Human"]
+  
+    "Knowledge and Understanding": ["Knowledge/Understanding-Concept", "Knowledge/Understanding-Procedure", "Knowledge/Understanding-Linking Ideas"],
+  "Generic Learning Outcomes": ["Skill-Task Completion", "Skill-Analyze", "Skill-Select/Evaluate"],
+  "Application of Knowledge and Skills": ["Application of Knowledge", "Application of Skill"],
+  "General, Tech, and Prof. Skills": ["Gen-Communication-Write/Oral/Read/Listen", "Gen-Critical/Judge/Responsibility", "Gen-IndependentLearning/IdentifyProblems"],
+"Constitutional, Humanistic, Ethical Values": ["Ethic-Practice-Constitution/Human/Moral"],
+    "Employability and Entrepreneurship": ["Empl-Job readiness", "Empl-Group work", "Empl-Responsible for self-work"],
+    "Student Contribution": ["StudentContri-Asking Questions", "StudentContri-Group Tasks", "ASPIRATIONAL-StudentContri-Asking Questions", "INTERDISCIPLINARY-StudentContri-Asking Questions"],
+    "StudentContri-Group Tasks": ["STANDARD-StudentContri-Group Tasks", "DEVELOPMENTAL-StudentContri-Group Tasks", "StudentContri-Risk Taking"],
+    "Subject Evolution": ["SubjectEvol-Over Time", "SubjectEvol-Human"],
 };
 
 const confirmedGAs = [];
 const sentenceStructures = {
-  "STANDARD-Knowledge/Understanding-Concept": {
+  "Knowledge/Understanding-Concept": {
     template: ["Graduates will be able to", "[verb]", "[core concepts/theories/principles]", "in", "[discipline]"],
     verbs: ["demonstrate","understand", "grasp"]
   },
