@@ -177,7 +177,7 @@ const gaOptions = {
     "Student Contribution": ["Student Contribution – Pose Meaningful Questions", "Student Contribution – Show learning from peers", "Student Contribution – Show listening ability and empathy", "Student Contribution – Show contribution of relevant knowledge/skills in peer’s knowledge"],
     "Subject Evolution": ["SubjectEvol-Over Time", "SubjectEvol-Human"],
 };
-
+ ✏️ We will develop Graduate Attributes below.
 const confirmedGAs = [];
 const sentenceStructures = {
   "Knowledge/Understanding-Concept": {
@@ -185,24 +185,12 @@ const sentenceStructures = {
     verbs: ["demonstrate","understand", "grasp"]
   },
     "Knowledge/Understanding-Procedure": {
-    template: ["Graduates will be able to", "[verb]", "standard", "[procedures/methods]", "for solving domain-relevant problems."],
+    template: ["Graduates will be able to", "[verb]", "standard", "[procedures/methods/techniques]", "used in "[discipline, and if applicable, its interdisciplinary contexts.]"],
     verbs: ["apply", "perform", "demonstrate"]
   },
-  "DEVELOPMENTAL-Knowledge/Understanding-Procedure": {
-    template: ["Graduates will be able to", "[verb]", "[methods/procedures]", "relevant to", "[discipline/task]"],
-    verbs: ["apply", "perform", "demonstrate"]
-  },
-  "ASPIRATIONAL-Knowledge/Understanding-Procedure": {
-    template: ["Graduates will", "[verb]", "and appreciate the role of", "[procedural methods]", "in", "[enabling problem-solving and real-world application in the field]"],
-    verbs: ["apply", "perform", "demonstrate"]
-  },
-  "INTERDISCIPLINARY-Knowledge/Understanding-Procedure": {
-    template: ["Graduates will", "[verb]", "procedural knowledge from", "[discipline]", "to its applications in", "[interdisciplinary or real-world domains]"],
-    verbs: ["apply", "perform", "demonstrate"]
-  },
-    "STANDARD-Knowledge/Understanding-Linking Ideas": {
-    template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
-    verbs: ["understand", "demonstrate", "develop", "articulate"]
+    "Knowledge/Understanding-Linking Ideas": {
+    template: ["Graduates will be able to", "[verb]", "[ideas and concepts within discipline and across interdisciplinary domains.]"],
+    verbs: ["connect", "relate", "integrate"]
   },
   "DEVELOPMENTAL-Knowledge/Understanding-Linking Ideas": {
     template: ["Graduates will", "[verb]", "foundational ability to use", "[methods/procedures]", "to", "[complete discipline-based tasks]"],
@@ -507,11 +495,8 @@ const sentenceStructures = {
 };
   const calculusExamples = {
   "Knowledge/Understanding-Concept": "Graduates will be able to understand foundational mathematical concepts and principles in pure and applied mathematics.",
-  "STANDARD-Knowledge/Understanding-Procedure": "GGraduates will be able to apply standard mathematical procedures such as integration techniques and matrix operations for solving mathematical problems.",
-  "DEVELOPMENTAL-Knowledge/Understanding-Procedure": "Graduates will perform a foundational ability to use algebraic and calculus-based procedures to approach mathematical tasks.",
-  "ASPIRATIONAL-Knowledge/Understanding-Procedure": "Graduates will demonstrate and appreciate the role of algorithmic and procedural knowledge in applying mathematics to real-world challenges.",
-  "INTERDISCIPLINARY-Knowledge/Understanding-Procedure": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques.",
-"STANDARD-Knowledge/Understanding-Linking Ideas": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
+  "Knowledge/Understanding-Procedure": "Graduates will be able to apply standard mathematical procedures used in calculus, algebra, and computational mathematics.",
+  "Knowledge/Understanding-Linking Ideas": "Graduates will be able to connect mathematical concepts in calculus, such as limits, differentiation, and integration.",
   "DEVELOPMENTAL-Knowledge/Understanding-Linking Ideas": "Graduates will be able to apply analytical and computational procedures relevant to mathematical modeling tasks.",
   "ASPIRATIONAL-Knowledge/Understanding-Linking Ideas": "Graduates will be able to integrate knowledge from mathematics and computer science to address interdisciplinary problems.",
   "INTERDISCIPLINARY-Knowledge/Understanding-Linking Ideas": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques.",
