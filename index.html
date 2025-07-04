@@ -120,28 +120,22 @@ Tool designed by <strong>Praveen Chhikara</strong>
 <h2>Step 1: Develop around 8 Graduate Attributes (or Program Learning Outcomes) for your program</h2>
 <label for="programName">Program Name (e.g., BSc Mathematics):</label>
 <input id="programName" placeholder="Enter program name" style="width: 100%;" type="text"/>
-<label for="zerothSelect">Select a Graduate Attribute (GA):</label>
+<label for="zerothSelect">Select Outcome Type:</label>
 <select id="zerothSelect">
-<option value="">-- Select a GA --</option>
-<option value="1">Knowledge and Understanding</option>
-<option value="2">Generic Learning Outcomes</option>
-<option value="3">Application of Knowledge and Skills</option>
-<option value="4">General, Tech, and Prof. Skills</option>
-<option value="5">Constitutional, Humanistic, Ethical Values</option>
-<option value="6">Employability and Entrepreneurship</option>
-<option value="7">Student Contribution</option>
-<option value="8">Subject Evolution</option>
+<option value="">-- Select an outcome type --</option>
+<option value="1">Standard Outcome</option>
+<option value="2">Aspirational Outcomes</option>
 </select>
-<label for="broadGA">Select a Sub-Graduate Attribute:</label>
+<label for="broadGA">Select a Graduate Attribute (GA):</label>
 <div id="gaHintPopup" style="display:none; position:absolute; background:#fffae6; color:#333; border:1px solid #ccc; padding:0.6rem; border-radius:5px; box-shadow:2px 2px 5px rgba(0,0,0,0.2); z-index:1000; font-weight:bold;">
   👉 Do this
 </div>
 <select id="broadGA">
-<option value="">-- Select a sub-GA Type --</option>
+<option value="">-- Select a sub-GA --</option>
 </select>
-<label for="gaSelect">Select a Sub-Graduate Attribute Type:</label>
+<label for="gaSelect">Select a Sub-Graduate Attribute:</label>
 <select id="gaSelect">
-<option value="">-- Select Sub-GA Type --</option>
+<option value="">-- Select a Sub-GA --</option>
 </select>
 <p id="exampleDisplay" style="font-style: italic; color: #6c757d;"></p><div id="sentenceStructure" style="margin-top: 1rem;"></div>
 <div id="gaButtons" style="display:none">
@@ -149,7 +143,7 @@ Tool designed by <strong>Praveen Chhikara</strong>
 <button onclick="if (isGAInputValid()) finalizeGA()">Save the above GA &amp; No more GAs to Add</button>
 </div>
 <div class="confirmed-list" style="background-color: #e9f7ef; border-left: 6px solid #2ecc71; padding: 1rem; border-radius: 6px;">
-<h3 style="color: #1e8449;">Your Graduate Attributes (program learning outcomes will populate below.</h3>
+<h3 style="color: #1e8449;">Your Graduate Attributes (program learning outcomes) will populate below.</h3>
 <ul id="gaList" style="font-weight: bold; font-size: 1.05rem;"></ul>
 </div>
 <div id="preStep2Buttons" style="margin-top: 2rem; display: none;">
