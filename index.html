@@ -495,411 +495,106 @@ function isGAInputValid() {
 
 
 const cloTemplates = {
-  "STANDARD-Knowledge/Understanding-Concept": {
+  "Knowledge/Understanding-Concept": {
     verbs: ["define", "describe", "explain", "classify", "summarize"],
     template: ["Students will be able to", "[verb]", "[concept/topic]", "in", "[context/course unit]"],
     example: "Students will be able to explain the concept of limits in the context of continuous functions."
   },
-  "DEVELOPMENTAL-Knowledge/Understanding-Concept": {
-    verbs: ["execute", "implement", "solve", "use", "operate"],
-    template: ["Students will be able to", "[verb]", "[procedure/tool]", "to", "[problem type or task]"],
-    example: "Students will be able to solve first-order differential equations to model population growth."
-  },
-  "ASPIRATIONAL-Knowledge/Understanding-Concept": {
-    verbs: ["compare", "contrast", "map", "associate", "synthesize"],
-    template: ["Students will be able to", "[verb]", "[ideas/concepts]", "across", "[disciplines/topics]"],
-    example: "Students will be able to compare derivatives and integrals across algebraic and trigonometric functions."
-  },
-  "INTERDISCIPLINARY-Knowledge/Understanding-Concept": {
-    verbs: ["use", "calculate", "build", "simulate", "follow"],
-    template: ["Students will be able to", "[verb]", "[tools/techniques]", "to", "[specific task]"],
-    example: "Students will be able to calculate the area under a curve using definite integrals."
-  },
-  "STANDARD-Knowledge/Understanding-Procedure": {
+  "Knowledge/Understanding-Procedure": {
     verbs: ["break down", "differentiate", "interpret", "infer"],
     template: ["Students will be able to", "[verb]", "[data/information]", "to", "[purpose]"],
     example: "Students will be able to interpret a graph of a function to determine intervals of increase and decrease."
   },
-  "DEVELOPMENTAL-Knowledge/Understanding-Procedure": {
-    verbs: ["choose", "justify", "critique", "test", "recommend"],
-    template: ["Students will be able to", "[verb]", "[methods/strategies]", "for", "[application/problem]"],
-    example: "Students will be able to justify the choice of substitution method in solving complex integrals."
-  },
-  "ASPIRATIONAL-Knowledge/Understanding-Procedure": {
-    verbs: ["solve", "demonstrate", "adapt", "implement"],
-    template: ["Students will be able to", "[verb]", "[knowledge/approach]", "in", "[real/simulated context]"],
-    example: "Students will be able to implement integration techniques in simulated physics problems."
-  },
-  "INTERDISCIPLINARY-Knowledge/Understanding-Procedure": {
-    verbs: ["design", "construct", "test", "produce", "revise"],
-    template: ["Students will be able to", "[verb]", "[model/solution]", "for", "[problem/task]"],
-    example: "Students will be able to design a mathematical model for predicting rates of change in populations."
-  },
-  "STANDARD-Knowledge/Understanding-Linking Ideas": {
+  "Knowledge/Understanding-Linking Ideas": {
     verbs: ["write", "present", "discuss", "summarize", "interpret", "listen"],
     template: ["Students will be able to", "[verb]", "[information/idea]", "in", "[mode/context]"],
     example: "Students will be able to present problem-solving strategies in oral presentations during tutorial sessions."
   },
-  "DEVELOPMENTAL-Knowledge/Understanding-Linking Ideas": {
-    verbs: ["critique", "assess", "argue", "justify", "conclude"],
-    template: ["Students will be able to", "[verb]", "[method/result]", "based on", "[evidence/context]"],
-    example: "Students will be able to justify the use of L'Hôpital's Rule for evaluating limits in indeterminate forms."
-  },
-  "ASPIRATIONAL-Knowledge/Understanding-Linking Ideas": {
-    verbs: ["identify", "propose", "investigate", "monitor", "revise"],
-    template: ["Students will be able to", "[verb]", "[learning goals/tasks]", "for", "[course objective/context]"],
-    example: "Students will be able to investigate alternative approaches to solve improper integrals."
-  },
-  "INTERDISCIPLINARY-Knowledge/Understanding-Linking Ideas": {
-    verbs: ["implement", "deliver", "follow protocols", "meet expectations"],
-    template: ["Students will be able to", "[verb]", "[tasks/assignments]", "in", "[professional/academic context]"],
-    example: "Students will be able to meet expectations in standardized calculus testing environments."
-  },
-  "STANDARD-Skill-Task Completion": {
+  "Skill-Task Completion": {
     verbs: ["cooperate", "support", "present jointly", "negotiate"],
     template: ["Students will be able to", "[verb]", "with peers to", "[team activity/goal]"],
     example: "Students will be able to present jointly with peers a group solution to a multistep optimization problem."
   },
-  "DEVELOPMENTAL-Skill-Task Completion": {
-    verbs: ["complete", "organize", "reflect", "plan", "fulfill"],
-    template: ["Students will be able to", "[verb]", "[task/activity]", "in", "[course/project context]"],
-    example: "Students will be able to organize and submit individual reports on assigned calculus exercises."
-  },
-  "ASPIRATIONAL-Skill-Task Completion": {
-    verbs: ["respond", "justify", "reflect", "act", "advocate"],
-    template: ["Students will be able to", "[verb]", "[ethical/humanistic value]", "in", "[decision/context]"],
-    example: "Students will be able to reflect on ethical considerations in applying calculus to real-life predictions."
-  },
-  "INTERDISCIPLINARY-Skill-Task Completion": {
-    verbs: ["question", "probe", "formulate", "challenge"],
-    template: ["Students will be able to", "[verb]", "[ideas/problems]", "during", "[discussion/situation]"],
-    example: "Students will be able to formulate questions about the limitations of derivative-based models during classroom discussions."
-  },
-  
-  "STANDARD-Skill-Analyze": {
+  "Skill-Analyze": {
     template: ["Graduates will be able to", "[verb]", "potential", "[risks or unintended effects]", "associated with", "[learning actions or decisions]"],
-    verbs: ["anticipate", "recognize", "acknowledge", "evaluate"]
+    verbs: ["anticipate", "recognize", "acknowledge", "evaluate"],
+    template: ["Students will be able to", "[verb]", "with peers to", "[team activity/goal]"],
+    example: "Students will be able to present jointly with peers a group solution to a multistep optimization problem."
   },
-  
-  "DEVELOPMENTAL-Skill-Analyze": {
-    verbs: ["analyze", "identify", "discuss", "reflect"],
-    template: ["Students will be able to", "[verb]", "[possible risks/errors]", "when", "[working on tasks/applying concepts]"],
-    example: "Students will be able to identify possible risks of misapplying the chain rule when solving composite function derivatives."
-  },
-  "ASPIRATIONAL-Skill-Analyze": {
-    verbs: ["collaborate", "present", "build on others’ ideas"],
-    template: ["Students will be able to", "[verb]", "in", "[group activity]", "to", "[purpose]"],
-    example: "Students will be able to collaborate in peer groups to build on others’ ideas for solving challenging integration tasks."
-  },
-  "INTERDISCIPLINARY-Skill-Analyze": {
-    verbs: ["describe", "compare", "explain", "outline", "map"],
-    template: ["Students will be able to", "[verb]", "[historical concepts]", "related to", "[subject area]"],
-    example: "Students will be able to explain the evolution of calculus from early Greek mathematics to Newton and Leibniz."
-  },
-  "STANDARD-Skill-Select/Evaluate": {
+  "Skill-Select/Evaluate": {
     verbs: ["identify", "describe", "analyze", "explain", "illustrate"],
     template: ["Students will be able to", "[verb]", "contributions of", "[individuals/cultures]", "in", "[subject/topic]"],
     example: "Students will be able to illustrate contributions of Indian and Arab mathematicians to early concepts of integration."
   },
-
- "DEVELOPMENTAL-Skill-Select/Evaluate": {
-    verbs: ["define", "describe", "explain", "classify", "summarize"],
-    template: ["Students will be able to", "[verb]", "[concept/topic]", "in", "[context/course unit]"],
-    example: "Students will be able to explain the concept of limits in the context of continuous functions."
-  },
-  "ASPIRATIONAL-Skill-Select/Evaluate": {
-    verbs: ["execute", "implement", "solve", "use", "operate"],
-    template: ["Students will be able to", "[verb]", "[procedure/tool]", "to", "[problem type or task]"],
-    example: "Students will be able to solve first-order differential equations to model population growth."
-  },
-  "INTERDISCIPLINARY-Skill-Select/Evaluate": {
-    verbs: ["compare", "contrast", "map", "associate", "synthesize"],
-    template: ["Students will be able to", "[verb]", "[ideas/concepts]", "across", "[disciplines/topics]"],
-    example: "Students will be able to compare derivatives and integrals across algebraic and trigonometric functions."
-  },
-  "STANDARD-Application of Knowledge": {
+  "Application of Knowledge": {
     verbs: ["use", "calculate", "build", "simulate", "follow"],
     template: ["Students will be able to", "[verb]", "[tools/techniques]", "to", "[specific task]"],
     example: "Students will be able to calculate the area under a curve using definite integrals."
   },
-  "DEVELOPMENTAL-Application of Knowledge": {
-    verbs: ["break down", "differentiate", "interpret", "infer"],
-    template: ["Students will be able to", "[verb]", "[data/information]", "to", "[purpose]"],
-    example: "Students will be able to interpret a graph of a function to determine intervals of increase and decrease."
-  },
-  "ASPIRATIONAL-Application of Knowledge": {
-    verbs: ["choose", "justify", "critique", "test", "recommend"],
-    template: ["Students will be able to", "[verb]", "[methods/strategies]", "for", "[application/problem]"],
-    example: "Students will be able to justify the choice of substitution method in solving complex integrals."
-  },
-  "INTERDISCIPLINARY-Application of Knowledge": {
-    verbs: ["solve", "demonstrate", "adapt", "implement"],
-    template: ["Students will be able to", "[verb]", "[knowledge/approach]", "in", "[real/simulated context]"],
-    example: "Students will be able to implement integration techniques in simulated physics problems."
-  },
-  "STANDARD-Application of Skill": {
+  "Application of Skill": {
     verbs: ["design", "construct", "test", "produce", "revise"],
     template: ["Students will be able to", "[verb]", "[model/solution]", "for", "[problem/task]"],
     example: "Students will be able to design a mathematical model for predicting rates of change in populations."
   },
-  "DEVELOPMENTAL-Application of Skill": {
-    verbs: ["write", "present", "discuss", "summarize", "interpret", "listen"],
-    template: ["Students will be able to", "[verb]", "[information/idea]", "in", "[mode/context]"],
-    example: "Students will be able to present problem-solving strategies in oral presentations during tutorial sessions."
-  },
-  "ASPIRATIONAL-Application of Skill": {
-    verbs: ["critique", "assess", "argue", "justify", "conclude"],
-    template: ["Students will be able to", "[verb]", "[method/result]", "based on", "[evidence/context]"],
-    example: "Students will be able to justify the use of L'Hôpital's Rule for evaluating limits in indeterminate forms."
-  },
-  "INTERDISCIPLINARY-Application of Skill": {
-    verbs: ["identify", "propose", "investigate", "monitor", "revise"],
-    template: ["Students will be able to", "[verb]", "[learning goals/tasks]", "for", "[course objective/context]"],
-    example: "Students will be able to investigate alternative approaches to solve improper integrals."
-  },
-  "STANDARD-Gen-Communication-Write/Oral/Read/Listen": {
+  "Gen-Communication-Write/Oral/Read/Listen": {
     verbs: ["implement", "deliver", "follow protocols", "meet expectations"],
     template: ["Students will be able to", "[verb]", "[tasks/assignments]", "in", "[professional/academic context]"],
     example: "Students will be able to meet expectations in standardized calculus testing environments."
   },
-  "DEVELOPMENTAL-Gen-Communication-Write/Oral/Read/Listen": {
-    verbs: ["cooperate", "support", "present jointly", "negotiate"],
-    template: ["Students will be able to", "[verb]", "with peers to", "[team activity/goal]"],
-    example: "Students will be able to present jointly with peers a group solution to a multistep optimization problem."
-  },
-  "ASPIRATIONAL-Gen-Communication-Write/Oral/Read/Listen": {
-    verbs: ["complete", "organize", "reflect", "plan", "fulfill"],
-    template: ["Students will be able to", "[verb]", "[task/activity]", "in", "[course/project context]"],
-    example: "Students will be able to organize and submit individual reports on assigned calculus exercises."
-  },
-  "INTERDISCIPLINARY-Gen-Communication-Write/Oral/Read/Listen": {
-    verbs: ["respond", "justify", "reflect", "act", "advocate"],
-    template: ["Students will be able to", "[verb]", "[ethical/humanistic value]", "in", "[decision/context]"],
-    example: "Students will be able to reflect on ethical considerations in applying calculus to real-life predictions."
-  },
-  "STANDARD-Gen-Critical/Judge/Responsibility": {
+  "Gen-Critical/Judge/Responsibility": {
     verbs: ["question", "probe", "formulate", "challenge"],
     template: ["Students will be able to", "[verb]", "[ideas/problems]", "during", "[discussion/situation]"],
     example: "Students will be able to formulate questions about the limitations of derivative-based models during classroom discussions."
   },
-  
-  "DEVELOPMENTAL-Gen-Critical/Judge/Responsibility": {
-    template: ["Graduates will be able to", "[verb]", "potential", "[risks or unintended effects]", "associated with", "[learning actions or decisions]"],
-    verbs: ["anticipate", "recognize", "acknowledge", "evaluate"]
-  },
-  
-  "ASPIRATIONAL-Gen-Critical/Judge/Responsibility": {
-    verbs: ["analyze", "identify", "discuss", "reflect"],
-    template: ["Students will be able to", "[verb]", "[possible risks/errors]", "when", "[working on tasks/applying concepts]"],
-    example: "Students will be able to identify possible risks of misapplying the chain rule when solving composite function derivatives."
-  },
-  "INTERDISCIPLINARY-Gen-Critical/Judge/Responsibility": {
-    verbs: ["collaborate", "present", "build on others’ ideas"],
-    template: ["Students will be able to", "[verb]", "in", "[group activity]", "to", "[purpose]"],
-    example: "Students will be able to collaborate in peer groups to build on others’ ideas for solving challenging integration tasks."
-  },
-  "STANDARD-Gen-IndependentLearning/IdentifyProblems": {
+  "Gen-IndependentLearning/IdentifyProblems": {
     verbs: ["describe", "compare", "explain", "outline", "map"],
     template: ["Students will be able to", "[verb]", "[historical concepts]", "related to", "[subject area]"],
     example: "Students will be able to explain the evolution of calculus from early Greek mathematics to Newton and Leibniz."
   },
-  "DEVELOPMENTAL-Gen-IndependentLearning/IdentifyProblems": {
-    verbs: ["identify", "describe", "analyze", "explain", "illustrate"],
-    template: ["Students will be able to", "[verb]", "contributions of", "[individuals/cultures]", "in", "[subject/topic]"],
-    example: "Students will be able to illustrate contributions of Indian and Arab mathematicians to early concepts of integration."
-  },
-
- "ASPIRATIONAL-Gen-IndependentLearning/IdentifyProblems": {
-    verbs: ["define", "describe", "explain", "classify", "summarize"],
-    template: ["Students will be able to", "[verb]", "[concept/topic]", "in", "[context/course unit]"],
-    example: "Students will be able to explain the concept of limits in the context of continuous functions."
-  },
-  "INTERDISCIPLINARY-Gen-IndependentLearning/IdentifyProblems": {
-    verbs: ["execute", "implement", "solve", "use", "operate"],
-    template: ["Students will be able to", "[verb]", "[procedure/tool]", "to", "[problem type or task]"],
-    example: "Students will be able to solve first-order differential equations to model population growth."
-  },
-  "STANDARD-Empl-Job readiness": {
+  "Empl-Job readiness": {
     verbs: ["compare", "contrast", "map", "associate", "synthesize"],
     template: ["Students will be able to", "[verb]", "[ideas/concepts]", "across", "[disciplines/topics]"],
     example: "Students will be able to compare derivatives and integrals across algebraic and trigonometric functions."
   },
-  "DEVELOPMENTAL-Empl-Job readiness": {
-    verbs: ["use", "calculate", "build", "simulate", "follow"],
-    template: ["Students will be able to", "[verb]", "[tools/techniques]", "to", "[specific task]"],
-    example: "Students will be able to calculate the area under a curve using definite integrals."
-  },
-  "ASPIRATIONAL-Empl-Job readiness": {
-    verbs: ["break down", "differentiate", "interpret", "infer"],
-    template: ["Students will be able to", "[verb]", "[data/information]", "to", "[purpose]"],
-    example: "Students will be able to interpret a graph of a function to determine intervals of increase and decrease."
-  },
-  "INTERDISCIPLINARY-Empl-Job readiness": {
-    verbs: ["choose", "justify", "critique", "test", "recommend"],
-    template: ["Students will be able to", "[verb]", "[methods/strategies]", "for", "[application/problem]"],
-    example: "Students will be able to justify the choice of substitution method in solving complex integrals."
-  },
-  "STANDARD-Empl-Group work": {
+  "Empl-Group work": {
     verbs: ["solve", "demonstrate", "adapt", "implement"],
     template: ["Students will be able to", "[verb]", "[knowledge/approach]", "in", "[real/simulated context]"],
     example: "Students will be able to implement integration techniques in simulated physics problems."
   },
-  "DEVELOPMENTAL-Empl-Group work": {
-    verbs: ["design", "construct", "test", "produce", "revise"],
-    template: ["Students will be able to", "[verb]", "[model/solution]", "for", "[problem/task]"],
-    example: "Students will be able to design a mathematical model for predicting rates of change in populations."
-  },
-  "ASPIRATIONAL-Empl-Group work": {
-    verbs: ["write", "present", "discuss", "summarize", "interpret", "listen"],
-    template: ["Students will be able to", "[verb]", "[information/idea]", "in", "[mode/context]"],
-    example: "Students will be able to present problem-solving strategies in oral presentations during tutorial sessions."
-  },
-  "INTERDISCIPLINARY-Empl-Group work": {
-    verbs: ["critique", "assess", "argue", "justify", "conclude"],
-    template: ["Students will be able to", "[verb]", "[method/result]", "based on", "[evidence/context]"],
-    example: "Students will be able to justify the use of L'Hôpital's Rule for evaluating limits in indeterminate forms."
-  },
-  "STANDARD-Empl-Responsible for self-work": {
+  "Empl-Responsible for self-work": {
     verbs: ["identify", "propose", "investigate", "monitor", "revise"],
     template: ["Students will be able to", "[verb]", "[learning goals/tasks]", "for", "[course objective/context]"],
     example: "Students will be able to investigate alternative approaches to solve improper integrals."
   },
-  "DEVELOPMENTAL-Empl-Responsible for self-work": {
-    verbs: ["implement", "deliver", "follow protocols", "meet expectations"],
-    template: ["Students will be able to", "[verb]", "[tasks/assignments]", "in", "[professional/academic context]"],
-    example: "Students will be able to meet expectations in standardized calculus testing environments."
-  },
-  "ASPIRATIONAL-Empl-Responsible for self-work": {
-    verbs: ["cooperate", "support", "present jointly", "negotiate"],
-    template: ["Students will be able to", "[verb]", "with peers to", "[team activity/goal]"],
-    example: "Students will be able to present jointly with peers a group solution to a multistep optimization problem."
-  },
-  "INTERDISCIPLINARY-Empl-Responsible for self-work": {
-    verbs: ["complete", "organize", "reflect", "plan", "fulfill"],
-    template: ["Students will be able to", "[verb]", "[task/activity]", "in", "[course/project context]"],
-    example: "Students will be able to organize and submit individual reports on assigned calculus exercises."
-  },
-  "STANDARD-Ethic-Practice-Constitution/Human/Moral": {
+  "Ethic-Practice-Constitution/Human/Moral": {
     verbs: ["respond", "justify", "reflect", "act", "advocate"],
     template: ["Students will be able to", "[verb]", "[ethical/humanistic value]", "in", "[decision/context]"],
     example: "Students will be able to reflect on ethical considerations in applying calculus to real-life predictions."
   },
-  "DEVELOPMENTAL-Ethic-Practice-Constitution/Human/Moral": {
-    verbs: ["question", "probe", "formulate", "challenge"],
-    template: ["Students will be able to", "[verb]", "[ideas/problems]", "during", "[discussion/situation]"],
-    example: "Students will be able to formulate questions about the limitations of derivative-based models during classroom discussions."
-  },
-  
-  "ASPIRATIONAL-Ethic-Practice-Constitution/Human/Moral": {
-    template: ["Graduates will be able to", "[verb]", "potential", "[risks or unintended effects]", "associated with", "[learning actions or decisions]"],
-    verbs: ["anticipate", "recognize", "acknowledge", "evaluate"]
-  },
-  
-  "INTERDISCIPLINARY-Ethic-Practice-Constitution/Human/Moral": {
-    verbs: ["analyze", "identify", "discuss", "reflect"],
-    template: ["Students will be able to", "[verb]", "[possible risks/errors]", "when", "[working on tasks/applying concepts]"],
-    example: "Students will be able to identify possible risks of misapplying the chain rule when solving composite function derivatives."
-  },
-  "STANDARD-StudentContri-Asking Questions": {
+  "StudentContri-Asking Questions": {
     verbs: ["collaborate", "present", "build on others’ ideas"],
     template: ["Students will be able to", "[verb]", "in", "[group activity]", "to", "[purpose]"],
     example: "Students will be able to collaborate in peer groups to build on others’ ideas for solving challenging integration tasks."
   },
-  "DEVELOPMENTAL-StudentContri-Asking Questions": {
-    verbs: ["describe", "compare", "explain", "outline", "map"],
-    template: ["Students will be able to", "[verb]", "[historical concepts]", "related to", "[subject area]"],
-    example: "Students will be able to explain the evolution of calculus from early Greek mathematics to Newton and Leibniz."
-  },
-  "ASPIRATIONAL-StudentContri-Asking Questions": {
-    verbs: ["identify", "describe", "analyze", "explain", "illustrate"],
-    template: ["Students will be able to", "[verb]", "contributions of", "[individuals/cultures]", "in", "[subject/topic]"],
-    example: "Students will be able to illustrate contributions of Indian and Arab mathematicians to early concepts of integration."
-  },
-  "INTERDISCIPLINARY-StudentContri-Asking Questions": {
-    verbs: ["critique", "assess", "argue", "justify", "conclude"],
-    template: ["Students will be able to", "[verb]", "[method/result]", "based on", "[evidence/context]"],
-    example: "Students will be able to justify the use of L'Hôpital's Rule for evaluating limits in indeterminate forms."
-  },
-  "STANDARD-StudentContri-Group Tasks": {
+  "StudentContri-Group Tasks": {
     verbs: ["identify", "propose", "investigate", "monitor", "revise"],
     template: ["Students will be able to", "[verb]", "[learning goals/tasks]", "for", "[course objective/context]"],
     example: "Students will be able to investigate alternative approaches to solve improper integrals."
   },
-  "DEVELOPMENTAL-StudentContri-Group Tasks": {
-    verbs: ["implement", "deliver", "follow protocols", "meet expectations"],
-    template: ["Students will be able to", "[verb]", "[tasks/assignments]", "in", "[professional/academic context]"],
-    example: "Students will be able to meet expectations in standardized calculus testing environments."
-  },
-  "ASPIRATIONAL-StudentContri-Group Tasks": {
-    verbs: ["cooperate", "support", "present jointly", "negotiate"],
-    template: ["Students will be able to", "[verb]", "with peers to", "[team activity/goal]"],
-    example: "Students will be able to present jointly with peers a group solution to a multistep optimization problem."
-  },
-  "INTERDISCIPLINARY-StudentContri-Group Tasks": {
-    verbs: ["complete", "organize", "reflect", "plan", "fulfill"],
-    template: ["Students will be able to", "[verb]", "[task/activity]", "in", "[course/project context]"],
-    example: "Students will be able to organize and submit individual reports on assigned calculus exercises."
-  },
-  "STANDARD-StudentContri-Risk Taking": {
+  "StudentContri-Risk Taking": {
     verbs: ["respond", "justify", "reflect", "act", "advocate"],
     template: ["Students will be able to", "[verb]", "[ethical/humanistic value]", "in", "[decision/context]"],
     example: "Students will be able to reflect on ethical considerations in applying calculus to real-life predictions."
   },
-  "DEVELOPMENTAL-StudentContri-Risk Taking": {
-    verbs: ["question", "probe", "formulate", "challenge"],
-    template: ["Students will be able to", "[verb]", "[ideas/problems]", "during", "[discussion/situation]"],
-    example: "Students will be able to formulate questions about the limitations of derivative-based models during classroom discussions."
-  },
-  
-  "ASPIRATIONAL-StudentContri-Risk Taking": {
-    template: ["Graduates will be able to", "[verb]", "potential", "[risks or unintended effects]", "associated with", "[learning actions or decisions]"],
-    verbs: ["anticipate", "recognize", "acknowledge", "evaluate"]
-  },
-  
-  "INTERDISCIPLINARY-StudentContri-Risk Taking": {
-    verbs: ["analyze", "identify", "discuss", "reflect"],
-    template: ["Students will be able to", "[verb]", "[possible risks/errors]", "when", "[working on tasks/applying concepts]"],
-    example: "Students will be able to identify possible risks of misapplying the chain rule when solving composite function derivatives."
-  },
-  "STANDARD-SubjectEvol-Over Time": {
+  "SubjectEvol-Over Time": {
     verbs: ["collaborate", "present", "build on others’ ideas"],
     template: ["Students will be able to", "[verb]", "in", "[group activity]", "to", "[purpose]"],
     example: "Students will be able to collaborate in peer groups to build on others’ ideas for solving challenging integration tasks."
   },
-  "DEVELOPMENTAL-SubjectEvol-Over Time": {
-    verbs: ["describe", "compare", "explain", "outline", "map"],
-    template: ["Students will be able to", "[verb]", "[historical concepts]", "related to", "[subject area]"],
-    example: "Students will be able to explain the evolution of calculus from early Greek mathematics to Newton and Leibniz."
-  },
-  "ASPIRATIONAL-SubjectEvol-Over Time": {
-    verbs: ["identify", "describe", "analyze", "explain", "illustrate"],
-    template: ["Students will be able to", "[verb]", "contributions of", "[individuals/cultures]", "in", "[subject/topic]"],
-    example: "Students will be able to illustrate contributions of Indian and Arab mathematicians to early concepts of integration."
-  },
-  "INTERDISCIPLINARY-SubjectEvol-Over Time": {
-    verbs: ["analyze", "identify", "discuss", "reflect"],
-    template: ["Students will be able to", "[verb]", "[possible risks/errors]", "when", "[working on tasks/applying concepts]"],
-    example: "Students will be able to identify possible risks of misapplying the chain rule when solving composite function derivatives."
-  },
-  "STANDARD-SubjectEvol-Human": {
+  "SubjectEvol-Human": {
     verbs: ["collaborate", "present", "build on others’ ideas"],
     template: ["Students will be able to", "[verb]", "in", "[group activity]", "to", "[purpose]"],
     example: "Students will be able to collaborate in peer groups to build on others’ ideas for solving challenging integration tasks."
-  },
-  "DEVELOPMENTAL-SubjectEvol-Human": {
-    verbs: ["describe", "compare", "explain", "outline", "map"],
-    template: ["Students will be able to", "[verb]", "[historical concepts]", "related to", "[subject area]"],
-    example: "Students will be able to explain the evolution of calculus from early Greek mathematics to Newton and Leibniz."
-  },
-  "ASPIRATIONAL-SubjectEvol-Human": {
-    verbs: ["identify", "describe", "analyze", "explain", "illustrate"],
-    template: ["Students will be able to", "[verb]", "contributions of", "[individuals/cultures]", "in", "[subject/topic]"],
-    example: "Students will be able to illustrate contributions of Indian and Arab mathematicians to early concepts of integration."
-  },
-  "INTERDISCIPLINARY-ubjectEvol-Human": {
-    verbs: ["analyze", "identify", "discuss", "reflect"],
-    template: ["Students will be able to", "[verb]", "[possible risks/errors]", "when", "[working on tasks/applying concepts]"],
-    example: "Students will be able to identify possible risks of misapplying the chain rule when solving composite function derivatives."
   }
 };
 
@@ -1231,86 +926,26 @@ function scrollAndHighlightCourseInput() {
 </script>
 <script>
 const step2SubGAOptions = [
-  "STANDARD-Knowledge/Understanding-Concept",
-  "DEVELOPMENTAL-Knowledge/Understanding-Concept",
-  "ASPIRATIONAL-Knowledge/Understanding-Concept",
-  "INTERDISCIPLINARY-Knowledge/Understanding-Concept",
-  "STANDARD-Knowledge/Understanding-Procedure",
-  "DEVELOPMENTAL-Knowledge/Understanding-Procedure",
-  "ASPIRATIONAL-Knowledge/Understanding-Procedure",
-  "INTERDISCIPLINARY-Knowledge/Understanding-Procedure",
-  "STANDARD-Knowledge/Understanding-Linking Ideas",
-  "DEVELOPMENTAL-Knowledge/Understanding-Linking Ideas",
-  "ASPIRATIONAL-Knowledge/Understanding-Linking Ideas",
-  "INTERDISCIPLINARY-Knowledge/Understanding-Linking Ideas",
-  "STANDARD-Skill-Task Completion",
-  "DEVELOPMENTAL-Skill-Task Completion",
-  "ASPIRATIONAL-Skill-Task Completion",
-  "INTERDISCIPLINARY-Skill-Task Completion",
-  "STANDARD-Skill-Analyze",
-  "DEVELOPMENTAL-Skill-Analyze",
-  "ASPIRATIONAL-Skill-Analyze",
-  "INTERDISCIPLINARY-Skill-Analyze",
-  "STANDARD-Skill-Select/Evaluate",
-  "DEVELOPMENTAL-Skill-Select/Evaluate",
-  "ASPIRATIONAL-Skill-Select/Evaluate",
-  "INTERDISCIPLINARY-Skill-Select/Evaluate",
-  "STANDARD-Application of Knowledge",
-  "DEVELOPMENTAL-Application of Knowledge",
-  "ASPIRATIONAL-Application of Knowledge",
-  "INTERDISCIPLINARY-Application of Knowledge",
-  "STANDARD-Application of Skill",
-  "DEVELOPMENTAL-Application of Skill",
-  "ASPIRATIONAL-Application of Skill",
-  "INTERDISCIPLINARY-Application of Skill",
-  "STANDARD-Gen-Communication-Write/Oral/Read/Listen",
-  "DEVELOPMENTAL-Gen-Communication-Write/Oral/Read/Listen",
-    "ASPIRATIONAL-Gen-Communication-Write/Oral/Read/Listen",
-  "INTERDISCIPLINARY-Gen-Communication-Write/Oral/Read/Listen",
-  "STANDARD-Gen-Critical/Judge/Responsibility",
-  "DEVELOPMENTAL-Gen-Critical/Judge/Responsibility",
-  "ASPIRATIONAL-Gen-Critical/Judge/Responsibility",
-  "INTERDISCIPLINARY-Gen-Critical/Judge/Responsibility",
-  "STANDARD-Gen-IndependentLearning/IdentifyProblems",
-  "DEVELOPMENTAL-Gen-IndependentLearning/IdentifyProblems",
-  "ASPIRATIONAL-Gen-IndependentLearning/IdentifyProblems",
-  "INTERDISCIPLINARY-Gen-IndependentLearning/IdentifyProblems",
-  "STANDARD-Empl-Job readiness",
-  "DEVELOPMENTAL-Empl-Job readiness",
-  "ASPIRATIONAL-Empl-Job readiness",
-  "INTERDISCIPLINARY-Empl-Job readiness",
-  "STANDARD-Empl-Group work",
-  "DEVELOPMENTAL-Empl-Group work",
-    "ASPIRATIONAL-Empl-Group work",
-  "INTERDISCIPLINARY-Empl-Group work",
-  "STANDARD-Empl-Responsible for self-work",
-  "DEVELOPMENTAL-Empl-Responsible for self-work",
-  "ASPIRATIONAL-Empl-Responsible for self-work",
-  "INTERDISCIPLINARY-Empl-Responsible for self-work",
-  "STANDARD-Ethic-Practice-Constitution/Human/Moral",
-  "DEVELOPMENTAL-Ethic-Practice-Constitution/Human/Moral",
-  "ASPIRATIONAL-Ethic-Practice-Constitution/Human/Moral",
-  "INTERDISCIPLINARY-Ethic-Practice-Constitution/Human/Moral",
-  "STANDARD-StudentContri-Asking Questions",
-  "DEVELOPMENTAL-StudentContri-Asking Questions",
-    "ASPIRATIONAL-StudentContri-Asking Questions",
-  "INTERDISCIPLINARY-StudentContri-Asking Questions",
-  "STANDARD-StudentContri-Group Tasks",
-  "DEVELOPMENTAL-StudentContri-Group Tasks",
-  "ASPIRATIONAL-StudentContri-Group Tasks",
-  "INTERDISCIPLINARY-StudentContri-Group Tasks",
-  "STANDARD-StudentContri-Risk Taking",
-  "DEVELOPMENTAL-StudentContri-Risk Taking",
-"ASPIRATIONAL-StudentContri-Risk Taking",
-  "INTERDISCIPLINARY-StudentContri-Risk Taking",
-  "STANDARD-SubjectEvol-Over Time",
-  "DEVELOPMENTAL-SubjectEvol-Over Time",
-  "ASPIRATIONAL-SubjectEvol-Over Time",
-  "INTERDISCIPLINARY-SubjectEvol-Over Time",
-  "STANDARD-SubjectEvol-Human",
-  "DEVELOPMENTAL-SubjectEvol-Human",
-    "ASPIRATIONAL-SubjectEvol-Human",
-  "INTERDISCIPLINARY-SubjectEvol-Human"    
+  "Knowledge/Understanding-Concept",
+  "Knowledge/Understanding-Procedure",
+  "Knowledge/Understanding-Linking Ideas",
+  "Skill-Task Completion",
+  "Skill-Analyze",
+  "Skill-Select/Evaluate",
+  "Application of Knowledge",
+  "Application of Skill",
+  "Gen-Communication-Write/Oral/Read/Listen",
+  "Gen-Critical/Judge/Responsibility",
+  "Gen-IndependentLearning/IdentifyProblems",
+  "Empl-Job readiness",
+  "Empl-Group work",
+  "Empl-Responsible for self-work",
+  "Ethic-Practice-Constitution/Human/Moral",
+  "StudentContri-Asking Questions",
+  "StudentContri-Group Tasks",
+  "StudentContri-Risk Taking",
+  "SubjectEvol-Over Time",
+  "SubjectEvol-Human"    
 ];
 
 function handleGASelectStep2() {
