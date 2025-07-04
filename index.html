@@ -179,424 +179,114 @@ const gaOptions = {
 
 const confirmedGAs = [];
 const sentenceStructures = {
-  "STANDARD-Knowledge/Understanding-Concept": {
+  "Knowledge/Understanding-Concept": {
     template: ["Graduates will be able to", "[verb]", "[core concepts/theories/principles]", "in", "[discipline]"],
     verbs: ["demonstrate","understand", "grasp"]
   },
-  "DEVELOPMENTAL-Knowledge/Understanding-Concept": {
-    template: ["Graduates will", "[verb]", "a foundational understanding of","[conceptual knowledge]", "in", "[discipline]"],
-    verbs: ["demonstrate","understand", "grasp"]
-  },
-  "ASPIRATIONAL-Knowledge/Understanding-Concept": {
-    template: ["Graduates will", "[verb]", "and appreciate the role of", "[conceptual knowledge]", "in", "[discipline]"],
-    verbs: ["demonstrate","understand", "grasp"]
-  },
-  "INTERDISCIPLINARY-Knowledge/Understanding-Concept": {
-    template: ["Graduates will", "[verb]", "conceptual knowledge from", "[discipline]", "and relate it to", "[other domain/real-world problems]"],
-    verbs: ["demonstrate","understand", "grasp"]
-  },
-    "STANDARD-Knowledge/Understanding-Procedure": {
+ "Knowledge/Understanding-Procedure": {
     template: ["Graduates will be able to", "[verb]", "standard", "[procedures/methods]", "for solving domain-relevant problems."],
     verbs: ["apply", "perform", "demonstrate"]
   },
-  "DEVELOPMENTAL-Knowledge/Understanding-Procedure": {
-    template: ["Graduates will be able to", "[verb]", "[methods/procedures]", "relevant to", "[discipline/task]"],
-    verbs: ["apply", "perform", "demonstrate"]
-  },
-  "ASPIRATIONAL-Knowledge/Understanding-Procedure": {
-    template: ["Graduates will", "[verb]", "and appreciate the role of", "[procedural methods]", "in", "[enabling problem-solving and real-world application in the field]"],
-    verbs: ["apply", "perform", "demonstrate"]
-  },
-  "INTERDISCIPLINARY-Knowledge/Understanding-Procedure": {
-    template: ["Graduates will", "[verb]", "procedural knowledge from", "[discipline]", "to its applications in", "[interdisciplinary or real-world domains]"],
-    verbs: ["apply", "perform", "demonstrate"]
-  },
-    "STANDARD-Knowledge/Understanding-Linking Ideas": {
+    "Knowledge/Understanding-Linking Ideas": {
     template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
     verbs: ["understand", "demonstrate", "develop", "articulate"]
   },
-  "DEVELOPMENTAL-Knowledge/Understanding-Linking Ideas": {
-    template: ["Graduates will", "[verb]", "foundational ability to use", "[methods/procedures]", "to", "[complete discipline-based tasks]"],
-    verbs: ["apply", "perform", "demonstrate", "use"]
-  },
-  "ASPIRATIONAL-Knowledge/Understanding-Linking Ideas": {
-    template: ["Graduates will be able to", "[verb]", "knowledge from", "[multiple disciplines]", "to address", "[issues/problems]"],
-    verbs: ["connect", "relate", "integrate", "combine"]
-  },
-  "INTERDISCIPLINARY-Knowledge/Understanding-Concept": {
-    template: ["Graduates will be able to", "[verb]", "a range of", "[technical/cognitive tasks]", "using appropriate tools and techniques"],
-    verbs: ["perform", "carry out", "execute", "operate"]
-  },
-"STANDARD-Skill-Task Completion": {
+  
+"Skill-Task Completion": {
     template: ["Graduates will be able to", "[verb]", "[domain-specific tasks/operations]", "required in", "[disciplinary contexts]"],
     verbs: ["perform", "carry out", "operate"]
   },
-  "DEVELOPMENTAL-Skill-Task Completion": {
-    template: ["Graduates will", "[verb]", "foundational", "[technical/cognitive tasks relevant to field]", "through strucutured learning."],
-    verbs: ["perform", "carry out", "operate"]
-  },
-  "ASPIRATIONAL-Skill-Task Completion": {
-    template: ["Graduates will be able to", "[verb]", "knowledge from", "[multiple disciplines]", "to address", "[issues/problems]"],
-    verbs: ["perform", "carry out", "operate"]
-  },
-  "INTERDISCIPLINARY-Skill-Task Completion": {
-    template: ["Graduates will be able to", "[verb]", "a range of", "[technical/cognitive tasks]", "using appropriate tools and techniques"],
-    verbs: ["perform", "carry out", "operate"]
-  },
-"STANDARD-Skill-Task Completion": {
+  
+"Skill-Task Completion": {
     template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
     verbs: ["perform", "carry out", "operate"]
   },
-  "DEVELOPMENTAL-Skill-Task Completion": {
-    template: ["Graduates will be able to", "[verb]", "[methods/procedures]", "relevant to", "[discipline/task]"],
-    verbs: ["perform", "carry out", "operate"]
-  },
-  "ASPIRATIONAL-Skill-Task Completion": {
-    template: ["Graduates will", "[verb]", "and value the importance of completing", "[discipline-specific tasks]"],
-    verbs: ["perform", "carry out", "operate"]
-  },
-  "INTERDISCIPLINARY-Skill-Task Completion": {
-    template: ["Graduates will", "[verb]", "relevant", "[technical/cognitive tasks]", "from", "discipline", "to address challenges in", "[interdisciplinary or real-world contexts.]"],
-    verbs: ["perform", "carry out", "operate"]
-  },
-"STANDARD-Skill-Analyze": {
+"Skill-Analyze": {
     template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
     verbs: ["analyze", "evaluate", "synthesize"]
   },
-  "DEVELOPMENTAL-Skill-Analyze": {
-    template: ["Graduates will be able to", "[verb]", "[methods/procedures]", "relevant to", "[discipline/task]"],
-    verbs: ["analyze", "evaluate", "synthesize"]
-  },
-  "ASPIRATIONAL-Skill-Analyze": {
-    template: ["Graduates will be able to", "[verb]", "knowledge from", "[multiple disciplines]", "to address", "[issues/problems]"],
-    verbs: ["analyze", "evaluate", "synthesize"]
-  },
-  "INTERDISCIPLINARY-Skill-Analyze": {
-    template: ["Graduates will be able to", "[verb]", "a range of", "[technical/cognitive tasks]", "using appropriate tools and techniques"],
-    verbs: ["analyze", "evaluate", "synthesize"]
-  },
-"STANDARD-Skill-Select/Evaluate": {
+"Skill-Select/Evaluate": {
     template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
     verbs: ["understand", "demonstrate", "develop", "articulate"]
   },
-  "DEVELOPMENTAL-Skill-Select/Evaluate": {
-    template: ["Graduates will be able to", "[verb]", "[methods/procedures]", "relevant to", "[discipline/task]"],
-    verbs: ["apply", "perform", "demonstrate", "use"]
-  },
-  "ASPIRATIONAL-Skill-Select/Evaluate": {
-    template: ["Graduates will be able to", "[verb]", "knowledge from", "[multiple disciplines]", "to address", "[issues/problems]"],
-    verbs: ["connect", "relate", "integrate", "combine"]
-  },
-  "INTERDISCIPLINARY-Skill-Select/Evaluate": {
-    template: ["Graduates will be able to", "[verb]", "a range of", "[technical/cognitive tasks]", "using appropriate tools and techniques"],
-    verbs: ["perform", "carry out", "execute", "operate"]
-  },
-"STANDARD-Application of Knowledge": {
+"Application of Knowledge": {
     template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
     verbs: ["understand", "demonstrate", "develop", "articulate"]
   },
-  "DEVELOPMENTAL-Application of Knowledge": {
-    template: ["Graduates will be able to", "[verb]", "[methods/procedures]", "relevant to", "[discipline/task]"],
-    verbs: ["apply", "perform", "demonstrate", "use"]
-  },
-  "ASPIRATIONAL-Application of Knowledge": {
-    template: ["Graduates will be able to", "[verb]", "knowledge from", "[multiple disciplines]", "to address", "[issues/problems]"],
-    verbs: ["connect", "relate", "integrate", "combine"]
-  },
-  "INTERDISCIPLINARY-Application of Knowledge": {
-    template: ["Graduates will be able to", "[verb]", "a range of", "[technical/cognitive tasks]", "using appropriate tools and techniques"],
-    verbs: ["perform", "carry out", "execute", "operate"]
-  },
-"STANDARD-Application of Skill": {
+"Application of Skill": {
     template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
     verbs: ["understand", "demonstrate", "develop", "articulate"]
   },
-  "DEVELOPMENTAL-Application of Skill": {
-    template: ["Graduates will be able to", "[verb]", "[methods/procedures]", "relevant to", "[discipline/task]"],
-    verbs: ["apply", "perform", "demonstrate", "use"]
-  },
-  "ASPIRATIONAL-Application of Skill": {
-    template: ["Graduates will be able to", "[verb]", "knowledge from", "[multiple disciplines]", "to address", "[issues/problems]"],
-    verbs: ["connect", "relate", "integrate", "combine"]
-  },
-  "INTERDISCIPLINARY-Application of Skill": {
-    template: ["Graduates will be able to", "[verb]", "a range of", "[technical/cognitive tasks]", "using appropriate tools and techniques"],
-    verbs: ["perform", "carry out", "execute", "operate"]
-  },
-"STANDARD-Gen-Communication-Write/Oral/Read/Listen": {
+"Gen-Communication-Write/Oral/Read/Listen": {
     template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
     verbs: ["understand", "demonstrate", "develop", "articulate"]
   },
-  "DEVELOPMENTAL-Gen-Communication-Write/Oral/Read/Listen": {
-    template: ["Graduates will be able to", "[verb]", "[methods/procedures]", "relevant to", "[discipline/task]"],
-    verbs: ["apply", "perform", "demonstrate", "use"]
-  },
-  "ASPIRATIONAL-Gen-Communication-Write/Oral/Read/Listen": {
-    template: ["Graduates will be able to", "[verb]", "knowledge from", "[multiple disciplines]", "to address", "[issues/problems]"],
-    verbs: ["connect", "relate", "integrate", "combine"]
-  },
-  "INTERDISCIPLINARY-Gen-Communication-Write/Oral/Read/Listen": {
-    template: ["Graduates will be able to", "[verb]", "a range of", "[technical/cognitive tasks]", "using appropriate tools and techniques"],
-    verbs: ["perform", "carry out", "execute", "operate"]
-  },
-"STANDARD-Gen-Critical/Judge/Responsibility": {
+"Gen-Critical/Judge/Responsibility": {
     template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
     verbs: ["understand", "demonstrate", "develop", "articulate"]
   },
-  "DEVELOPMENTAL-Gen-Critical/Judge/Responsibility": {
-    template: ["Graduates will be able to", "[verb]", "[methods/procedures]", "relevant to", "[discipline/task]"],
-    verbs: ["apply", "perform", "demonstrate", "use"]
-  },
-  "ASPIRATIONAL-Gen-Critical/Judge/Responsibility": {
-    template: ["Graduates will be able to", "[verb]", "knowledge from", "[multiple disciplines]", "to address", "[issues/problems]"],
-    verbs: ["connect", "relate", "integrate", "combine"]
-  },
-  "INTERDISCIPLINARY-Gen-Critical/Judge/Responsibility": {
-    template: ["Graduates will be able to", "[verb]", "a range of", "[technical/cognitive tasks]", "using appropriate tools and techniques"],
-    verbs: ["perform", "carry out", "execute", "operate"]
-  },
-"STANDARD-Gen-IndependentLearning/IdentifyProblems": {
+"Gen-IndependentLearning/IdentifyProblems": {
     template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
     verbs: ["understand", "demonstrate", "develop", "articulate"]
   },
-  "DEVELOPMENTAL-Gen-IndependentLearning/IdentifyProblems": {
-    template: ["Graduates will be able to", "[verb]", "[methods/procedures]", "relevant to", "[discipline/task]"],
-    verbs: ["apply", "perform", "demonstrate", "use"]
-  },
-  "ASPIRATIONAL-Gen-IndependentLearning/IdentifyProblems": {
-    template: ["Graduates will be able to", "[verb]", "knowledge from", "[multiple disciplines]", "to address", "[issues/problems]"],
-    verbs: ["connect", "relate", "integrate", "combine"]
-  },
-  "INTERDISCIPLINARY-Gen-IndependentLearning/IdentifyProblems": {
-    template: ["Graduates will be able to", "[verb]", "a range of", "[technical/cognitive tasks]", "using appropriate tools and techniques"],
-    verbs: ["perform", "carry out", "execute", "operate"]
-  },
-"STANDARD-Empl-Job readiness": {
+"Empl-Job readiness": {
     template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
     verbs: ["understand", "demonstrate", "develop", "articulate"]
   },
-  "DEVELOPMENTAL-Empl-Job readiness": {
-    template: ["Graduates will be able to", "[verb]", "[methods/procedures]", "relevant to", "[discipline/task]"],
-    verbs: ["apply", "perform", "demonstrate", "use"]
-  },
-  "ASPIRATIONAL-Empl-Job readiness": {
-    template: ["Graduates will be able to", "[verb]", "knowledge from", "[multiple disciplines]", "to address", "[issues/problems]"],
-    verbs: ["connect", "relate", "integrate", "combine"]
-  },
-  "INTERDISCIPLINARY-Empl-Job readiness": {
-    template: ["Graduates will be able to", "[verb]", "a range of", "[technical/cognitive tasks]", "using appropriate tools and techniques"],
-    verbs: ["perform", "carry out", "execute", "operate"]
-  },
-"STANDARD-Empl-Group work": {
+"Empl-Group work": {
     template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
     verbs: ["understand", "demonstrate", "develop", "articulate"]
   },
-  "DEVELOPMENTAL-Empl-Group work": {
-    template: ["Graduates will be able to", "[verb]", "[methods/procedures]", "relevant to", "[discipline/task]"],
-    verbs: ["apply", "perform", "demonstrate", "use"]
-  },
-  "ASPIRATIONAL-Empl-Group work": {
-    template: ["Graduates will be able to", "[verb]", "knowledge from", "[multiple disciplines]", "to address", "[issues/problems]"],
-    verbs: ["connect", "relate", "integrate", "combine"]
-  },
-  "INTERDISCIPLINARY-Empl-Group work": {
-    template: ["Graduates will be able to", "[verb]", "a range of", "[technical/cognitive tasks]", "using appropriate tools and techniques"],
-    verbs: ["perform", "carry out", "execute", "operate"]
-  },
-"STANDARD-Empl-Responsible for self-work": {
+"Empl-Responsible for self-work": {
     template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
     verbs: ["understand", "demonstrate", "develop", "articulate"]
   },
-  "DEVELOPMENTAL-Empl-Responsible for self-work": {
-    template: ["Graduates will be able to", "[verb]", "[methods/procedures]", "relevant to", "[discipline/task]"],
-    verbs: ["apply", "perform", "demonstrate", "use"]
-  },
-  "ASPIRATIONAL-Empl-Responsible for self-work": {
-    template: ["Graduates will be able to", "[verb]", "knowledge from", "[multiple disciplines]", "to address", "[issues/problems]"],
-    verbs: ["connect", "relate", "integrate", "combine"]
-  },
-  "INTERDISCIPLINARY-Empl-Responsible for self-work": {
-    template: ["Graduates will be able to", "[verb]", "a range of", "[technical/cognitive tasks]", "using appropriate tools and techniques"],
-    verbs: ["perform", "carry out", "execute", "operate"]
-  },
-"STANDARD-Ethic-Practice-Constitution/Human/Moral": {
+"Ethic-Practice-Constitution/Human/Moral": {
     template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
     verbs: ["understand", "demonstrate", "develop", "articulate"]
   },
-  "DEVELOPMENTAL-Ethic-Practice-Constitution/Human/Moral": {
-    template: ["Graduates will be able to", "[verb]", "[methods/procedures]", "relevant to", "[discipline/task]"],
-    verbs: ["apply", "perform", "demonstrate", "use"]
-  },
-  "ASPIRATIONAL-Ethic-Practice-Constitution/Human/Moral": {
-    template: ["Graduates will be able to", "[verb]", "knowledge from", "[multiple disciplines]", "to address", "[issues/problems]"],
-    verbs: ["connect", "relate", "integrate", "combine"]
-  },
-  "INTERDISCIPLINARY-Ethic-Practice-Constitution/Human/Moral": {
-    template: ["Graduates will be able to", "[verb]", "a range of", "[technical/cognitive tasks]", "using appropriate tools and techniques"],
-    verbs: ["perform", "carry out", "execute", "operate"]
-  },
-"STANDARD-StudentContri-Asking Questions": {
+"StudentContri-Asking Questions": {
     template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
     verbs: ["understand", "demonstrate", "develop", "articulate"]
   },
-  "DEVELOPMENTAL-StudentContri-Asking Questions": {
-    template: ["Graduates will be able to", "[verb]", "[methods/procedures]", "relevant to", "[discipline/task]"],
-    verbs: ["apply", "perform", "demonstrate", "use"]
-  },
-  "ASPIRATIONAL-StudentContri-Asking Questions": {
-    template: ["Graduates will be able to", "[verb]", "knowledge from", "[multiple disciplines]", "to address", "[issues/problems]"],
-    verbs: ["connect", "relate", "integrate", "combine"]
-  },
-  "INTERDISCIPLINARY-StudentContri-Asking Questions": {
-    template: ["Graduates will be able to", "[verb]", "a range of", "[technical/cognitive tasks]", "using appropriate tools and techniques"],
-    verbs: ["perform", "carry out", "execute", "operate"]
-  },
-"STANDARD-StudentContri-Group Tasks": {
+"StudentContri-Group Tasks": {
     template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
     verbs: ["understand", "demonstrate", "develop", "articulate"]
   },
-  "DEVELOPMENTAL-StudentContri-Group Tasks": {
-    template: ["Graduates will be able to", "[verb]", "[methods/procedures]", "relevant to", "[discipline/task]"],
-    verbs: ["apply", "perform", "demonstrate", "use"]
-  },
-  "ASPIRATIONAL-StudentContri-Group Tasks": {
-    template: ["Graduates will be able to", "[verb]", "knowledge from", "[multiple disciplines]", "to address", "[issues/problems]"],
-    verbs: ["connect", "relate", "integrate", "combine"]
-  },
-  "INTERDISCIPLINARY-StudentContri-Group Tasks": {
-    template: ["Graduates will be able to", "[verb]", "a range of", "[technical/cognitive tasks]", "using appropriate tools and techniques"],
-    verbs: ["perform", "carry out", "execute", "operate"]
-  },
-"STANDARD-StudentContri-Risk Taking": {
+"StudentContri-Risk Taking": {
     template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
     verbs: ["understand", "demonstrate", "develop", "articulate"]
   },
-  "DEVELOPMENTAL-StudentContri-Risk Taking": {
-    template: ["Graduates will be able to", "[verb]", "[methods/procedures]", "relevant to", "[discipline/task]"],
-    verbs: ["apply", "perform", "demonstrate", "use"]
-  },
-  "ASPIRATIONAL-StudentContri-Risk Taking": {
-    template: ["Graduates will be able to", "[verb]", "knowledge from", "[multiple disciplines]", "to address", "[issues/problems]"],
-    verbs: ["connect", "relate", "integrate", "combine"]
-  },
-  "INTERDISCIPLINARY-StudentContri-Risk Taking": {
-    template: ["Graduates will be able to", "[verb]", "a range of", "[technical/cognitive tasks]", "using appropriate tools and techniques"],
-    verbs: ["perform", "carry out", "execute", "operate"]
-  },
-"STANDARD-SubjectEvol-Over Time": {
+ "SubjectEvol-Over Time": {
     template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
     verbs: ["understand", "demonstrate", "develop", "articulate"]
   },
-  "DEVELOPMENTAL-SubjectEvol-Over Time": {
-    template: ["Graduates will be able to", "[verb]", "[methods/procedures]", "relevant to", "[discipline/task]"],
-    verbs: ["apply", "perform", "demonstrate", "use"]
-  },
-  "ASPIRATIONAL-SubjectEvol-Over Time": {
-    template: ["Graduates will be able to", "[verb]", "knowledge from", "[multiple disciplines]", "to address", "[issues/problems]"],
-    verbs: ["connect", "relate", "integrate", "combine"]
-  },
-  "INTERDISCIPLINARY-SubjectEvol-Over Time": {
-    template: ["Graduates will be able to", "[verb]", "a range of", "[technical/cognitive tasks]", "using appropriate tools and techniques"],
-    verbs: ["perform", "carry out", "execute", "operate"]
-  },
-"STANDARD-SubjectEvol-Human": {
+"SubjectEvol-Human": {
     template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
     verbs: ["understand", "demonstrate", "develop", "articulate"]
   },
-  "DEVELOPMENTAL-SubjectEvol-Human": {
-    template: ["Graduates will be able to", "[verb]", "[methods/procedures]", "relevant to", "[discipline/task]"],
-    verbs: ["apply", "perform", "demonstrate", "use"]
-  },
-  "ASPIRATIONAL-SubjectEvol-Human": {
-    template: ["Graduates will be able to", "[verb]", "knowledge from", "[multiple disciplines]", "to address", "[issues/problems]"],
-    verbs: ["connect", "relate", "integrate", "combine"]
-  },
-  "INTERDISCIPLINARY-SubjectEvol-Human": {
-    template: ["Graduates will be able to", "[verb]", "a range of", "[technical/cognitive tasks]", "using appropriate tools and techniques"],
-    verbs: ["perform", "carry out", "execute", "operate"]
-  }
 };
   const calculusExamples = {
-  "STANDARD-Knowledge/Understanding-Concept": "Graduates will be able to demonstrate core concepts and theorems in pure and applied mathematics.",
-  "DEVELOPMENTAL-Knowledge/Understanding-Concept": "Graduates will grasp a foundational understanding of mathematical logic and number theory in the field of mathematics.",
-  "ASPIRATIONAL-Knowledge/Understanding-Concept": "Graduates will understand and appreciate the role of set theory and mathematical proofs in the foundations of mathematics.",
-  "INTERDISCIPLINARY-Knowledge/Understanding-Concept": "Graduates will apply procedural methods from linear algebra and calculus to its applications in modeling and interpreting systems in physics and data science.",
-  "STANDARD-Knowledge/Understanding-Procedure": "GGraduates will be able to apply standard mathematical procedures such as integration techniques and matrix operations for solving mathematical problems.",
-  "DEVELOPMENTAL-Knowledge/Understanding-Procedure": "Graduates will perform a foundational ability to use algebraic and calculus-based procedures to approach mathematical tasks.",
-  "ASPIRATIONAL-Knowledge/Understanding-Procedure": "Graduates will demonstrate and appreciate the role of algorithmic and procedural knowledge in applying mathematics to real-world challenges.",
-  "INTERDISCIPLINARY-Knowledge/Understanding-Procedure": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques.",
-"STANDARD-Knowledge/Understanding-Linking Ideas": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
-  "DEVELOPMENTAL-Knowledge/Understanding-Linking Ideas": "Graduates will be able to apply analytical and computational procedures relevant to mathematical modeling tasks.",
-  "ASPIRATIONAL-Knowledge/Understanding-Linking Ideas": "Graduates will be able to integrate knowledge from mathematics and computer science to address interdisciplinary problems.",
-  "INTERDISCIPLINARY-Knowledge/Understanding-Linking Ideas": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques.",
-  "STANDARD-Skill-Task Completion": "Graduates will be able to perform calculations and symbolic manipulations required in mathematical problem solving.",
-  "DEVELOPMENTAL-Skill-Task Completion": "Graduates will carry out foundational computational tasks such as solving equations and transforming functions through structured learning.",
-  "ASPIRATIONAL-Skill-Task Completion": "Graduates will perform and value the importance of completing mathematical modeling.",
-  "INTERDISCIPLINARY-Skill-Task Completion": "Graduates will carry out relevant mathematical tasks from differential equations and statistics to address challenges in engineering and public policy.",
-  "STANDARD-Skill-Analyze": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
-  "DEVELOPMENTAL-Skill-Analyze": "Graduates will be able to apply analytical and computational procedures relevant to mathematical modeling tasks.",
-  "ASPIRATIONAL-Skill-Analyze": "Graduates will be able to integrate knowledge from mathematics and computer science to address interdisciplinary problems.",
-  "INTERDISCIPLINARY-Skill-Analyze": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques.",
-  "STANDARD-Skill-Select/Evaluate": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
-  "DEVELOPMENTAL-Skill-Select/Evaluate": "Graduates will be able to apply analytical and computational procedures relevant to mathematical modeling tasks.",
-  "ASPIRATIONAL-Skill-Select/Evaluate": "Graduates will be able to integrate knowledge from mathematics and computer science to address interdisciplinary problems.",
-  "INTERDISCIPLINARY-Skill-Select/Evaluate": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques.",
-  "STANDARD-Application of Knowledge": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
-  "DEVELOPMENTAL-Application of Knowledge": "Graduates will be able to apply analytical and computational procedures relevant to mathematical modeling tasks.",
-  "ASPIRATIONAL-Application of Knowledge": "Graduates will be able to integrate knowledge from mathematics and computer science to address interdisciplinary problems.",
-  "INTERDISCIPLINARY-Application of Knowledge": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques.",
-  "STANDARD-Application of Skill": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
-  "DEVELOPMENTAL-Application of Skill": "Graduates will be able to apply analytical and computational procedures relevant to mathematical modeling tasks.",
-  "ASPIRATIONAL-Application of Skill": "Graduates will be able to integrate knowledge from mathematics and computer science to address interdisciplinary problems.",
-  "INTERDISCIPLINARY-Application of Skill": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques.",
-  "STANDARD-Gen-Communication-Write/Oral/Read/Listen": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
-  "DEVELOPMENTAL-Gen-Communication-Write/Oral/Read/Listen": "Graduates will be able to apply analytical and computational procedures relevant to mathematical modeling tasks.",
-  "ASPIRATIONAL-Gen-Communication-Write/Oral/Read/Listen": "Graduates will be able to integrate knowledge from mathematics and computer science to address interdisciplinary problems.",
-  "INTERDISCIPLINARY-Gen-Communication-Write/Oral/Read/Listen": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques.",
-  "STANDARD-Gen-Critical/Judge/Responsibility": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
-  "DEVELOPMENTAL-Gen-Critical/Judge/Responsibility": "Graduates will be able to apply analytical and computational procedures relevant to mathematical modeling tasks.",
-  "ASPIRATIONAL-Gen-Critical/Judge/Responsibility": "Graduates will be able to integrate knowledge from mathematics and computer science to address interdisciplinary problems.",
-  "INTERDISCIPLINARY-Gen-Critical/Judge/Responsibility": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques.",
-  "STANDARD-Gen-IndependentLearning/IdentifyProblems": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
-  "DEVELOPMENTAL-Gen-IndependentLearning/IdentifyProblems": "Graduates will be able to apply analytical and computational procedures relevant to mathematical modeling tasks.",
-  "ASPIRATIONAL-Gen-IndependentLearning/IdentifyProblems": "Graduates will be able to integrate knowledge from mathematics and computer science to address interdisciplinary problems.",
-  "INTERDISCIPLINARY-Gen-IndependentLearning/IdentifyProblems": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques.",
-  "STANDARD-Empl-Job readiness": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
-  "DEVELOPMENTAL-Empl-Job readiness": "Graduates will be able to apply analytical and computational procedures relevant to mathematical modeling tasks.",
-  "ASPIRATIONAL-Empl-Job readiness": "Graduates will be able to integrate knowledge from mathematics and computer science to address interdisciplinary problems.",
-  "INTERDISCIPLINARY-Empl-Job readiness": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques.",
-  "STANDARD-Empl-Group work": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
-  "DEVELOPMENTAL-Empl-Group work": "Graduates will be able to apply analytical and computational procedures relevant to mathematical modeling tasks.",
-  "ASPIRATIONAL-Empl-Group work": "Graduates will be able to integrate knowledge from mathematics and computer science to address interdisciplinary problems.",
-  "INTERDISCIPLINARY-Empl-Group work": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques.",
-  "STANDARD-Empl-Responsible for self-work": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
-  "DEVELOPMENTAL-Empl-Responsible for self-work": "Graduates will be able to apply analytical and computational procedures relevant to mathematical modeling tasks.",
-  "ASPIRATIONAL-Empl-Responsible for self-work": "Graduates will be able to integrate knowledge from mathematics and computer science to address interdisciplinary problems.",
-  "INTERDISCIPLINARY-Empl-Responsible for self-work": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques.",
-  "STANDARD-Ethic-Practice-Constitution/Human/Moral": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
-  "DEVELOPMENTAL-Ethic-Practice-Constitution/Human/Moral": "Graduates will be able to apply analytical and computational procedures relevant to mathematical modeling tasks.",
-  "ASPIRATIONAL-Ethic-Practice-Constitution/Human/Moral": "Graduates will be able to integrate knowledge from mathematics and computer science to address interdisciplinary problems.",
-  "INTERDISCIPLINARY-Ethic-Practice-Constitution/Human/Moral": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques.",
-  "STANDARD-StudentContri-Asking Questions": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
-  "DEVELOPMENTAL-StudentContri-Asking Questions": "Graduates will be able to apply analytical and computational procedures relevant to mathematical modeling tasks.",
-  "ASPIRATIONAL-StudentContri-Asking Questions": "Graduates will be able to integrate knowledge from mathematics and computer science to address interdisciplinary problems.",
-  "INTERDISCIPLINARY-StudentContri-Asking Questions": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques.",
-  "STANDARD-StudentContri-Group Tasks": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
-  "DEVELOPMENTAL-StudentContri-Group Tasks": "Graduates will be able to apply analytical and computational procedures relevant to mathematical modeling tasks.",
-  "ASPIRATIONAL-StudentContri-Group Tasks": "Graduates will be able to integrate knowledge from mathematics and computer science to address interdisciplinary problems.",
-  "INTERDISCIPLINARY-StudentContri-Group Tasks": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques.",
-  "STANDARD-StudentContri-Risk Taking": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
-  "DEVELOPMENTAL-StudentContri-Risk Taking": "Graduates will be able to apply analytical and computational procedures relevant to mathematical modeling tasks.",
-  "ASPIRATIONAL-StudentContri-Risk Taking": "Graduates will be able to integrate knowledge from mathematics and computer science to address interdisciplinary problems.",
-  "INTERDISCIPLINARY-StudentContri-Risk Taking": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques.",
-  "STANDARD-SubjectEvol-Over Time": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
-  "DEVELOPMENTAL-SubjectEvol-Over Time": "Graduates will be able to apply analytical and computational procedures relevant to mathematical modeling tasks.",
-  "ASPIRATIONAL-SubjectEvol-Over Time": "Graduates will be able to integrate knowledge from mathematics and computer science to address interdisciplinary problems.",
-  "INTERDISCIPLINARY-SubjectEvol-Over Time": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques.",
-  "STANDARD-SubjectEvol-Human": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
-  "DEVELOPMENTAL-SubjectEvol-Human": "Graduates will be able to apply analytical and computational procedures relevant to mathematical modeling tasks.",
-  "ASPIRATIONAL-SubjectEvol-Human": "Graduates will be able to integrate knowledge from mathematics and computer science to address interdisciplinary problems.",
-  "INTERDISCIPLINARY-SubjectEvol-Human": "Graduates will be able to perform a range of mathematical calculations and simulations using appropriate tools and techniques."
+  "Knowledge/Understanding-Concept": "Graduates will be able to demonstrate core concepts and theorems in pure and applied mathematics.",
+  "Knowledge/Understanding-Procedure": "GGraduates will be able to apply standard mathematical procedures such as integration techniques and matrix operations for solving mathematical problems.",
+  "Knowledge/Understanding-Linking Ideas": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
+  "Skill-Task Completion": "Graduates will be able to perform calculations and symbolic manipulations required in mathematical problem solving.",
+  "Skill-Analyze": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
+  "Skill-Select/Evaluate": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
+  "Application of Knowledge": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
+  "Application of Skill": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
+  "Gen-Communication-Write/Oral/Read/Listen": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
+  "Gen-Critical/Judge/Responsibility": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
+  "Gen-IndependentLearning/IdentifyProblems": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
+  "Empl-Job readiness": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
+  "Empl-Group work": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
+  "Empl-Responsible for self-work": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
+  "Ethic-Practice-Constitution/Human/Moral": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
+  "StudentContri-Asking Questions": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
+  "StudentContri-Group Tasks": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
+  "StudentContri-Risk Taking": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
+  "SubjectEvol-Over Time": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
+  "SubjectEvol-Human": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics."
   };
 
 
