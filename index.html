@@ -137,7 +137,7 @@ Tool designed by <strong>Praveen Chhikara</strong>
 </select>
 <p id="exampleDisplay" style="font-style: italic; color: #6c757d;"></p><div id="sentenceStructure" style="margin-top: 1rem;"></div>
 <div id="gaButtons" style="display:none">
-<button onclick="if (isGAInputValid()) saveGA()">Save the above GA &amp; Add more GAs</button>
+<button onclick="if (isGAInputValid()) saveGA()">Save the above GA &amp; Add another</button>
 <button onclick="if (isGAInputValid()) finalizeGA()">Save the above GA &amp; No more GAs to Add</button>
 </div>
 <div class="confirmed-list" style="background-color: #e9f7ef; border-left: 6px solid #2ecc71; padding: 1rem; border-radius: 6px;">
@@ -145,7 +145,7 @@ Tool designed by <strong>Praveen Chhikara</strong>
 <ul id="gaList" style="font-weight: bold; font-size: 1.05rem;"></ul>
 </div>
 <div id="preStep2Buttons" style="margin-top: 2rem; display: none;">
-<button onclick="document.getElementById('step2').style.display='block'; scrollAndHighlightCourseInput();" style="background-color: #ffc107; color: black;">Let's move to developing CLOs for the above GAs</button>
+<button onclick="document.getElementById('step2').style.display='block'; scrollAndHighlightCourseInput();" style="background-color: #ffc107; color: black;">Continue to CLO Development for above GAs</button>
 </div>
 </section>
 <section id="step2">
@@ -158,7 +158,7 @@ Tool designed by <strong>Praveen Chhikara</strong>
 <div id="cloHintPopup" style="display:none; position:absolute; background:#eaffea; color:#2e7d32; border:1px solid #b2dfdb; padding:0.6rem; border-radius:5px; box-shadow:2px 2px 5px rgba(0,0,0,0.2); z-index:1000; font-weight:bold;">
   ✅ Develop another CLO for the GA selected above.
 </div>
-<label for="gaSelectDropdown" style="margin-top:1rem; color: #d63384; font-weight: bold;">Select a GA to write a CLO for the course above</label>
+<label for="gaSelectDropdown" style="margin-top:1rem; color: #d63384; font-weight: bold;">Choose a GA to Develop a CLO for this Course</label>
 <select id="gaSelectDropdown" style="margin-bottom: 1rem;"></select>
 <div id="cloDisplayBlock" style="margin-top: 1rem;"></div>
 <div id="step2SubGABlocksContainer" style="margin-top: 2rem;"></div><button id="showCLOSummaryButton" style="background-color: #dc3545; color: white; margin-top: 2rem;">Added all GAs; create a table</button><div id="cloSummaryTable" style="display:none; margin-top:2rem;"></div>
@@ -603,7 +603,7 @@ document.getElementById("zerothSelect").addEventListener("change", function () {
   const selectedCategory = this.value;
   populateBroadGAs(selectedCategory);
 
-  // Scroll and highlight "Select a Sub-Graduate Attribute:"
+  // Scroll and highlight "Choose Sub-Attribute (Sub-GA):"
   const broadLabel = document.querySelector('label[for="broadGA"]');
   if (broadLabel) {
     broadLabel.classList.add("highlight-label");
@@ -1009,7 +1009,7 @@ label.style.fontWeight = "bold";
 cloDisplay.appendChild(label);
 
 const note = document.createElement("p");
-note.textContent = "This option will be auto-selected based on the selected GA above.";
+note.textContent = "This option will auto-match the GA you selected above; you do not need to select the option.";
 note.style.color = "#6f42c1";  // Bootstrap purple
 note.style.fontSize = "0.85rem";
 note.style.marginTop = "0.25rem";
@@ -1130,7 +1130,7 @@ output.appendChild(sentenceLine);
             block.appendChild(ul);
 block.insertAdjacentHTML("beforeend", `
 <p style="margin-top: 0.5rem; color: #dc3545; font-style: italic; font-weight: bold;">
-  ⚠️ Be sure that there are no duplicate CLOs due to entering the buttons repeatedly.
+  ⚠️ Avoid clicking Save multiple times for the same CLO.
 </p>
 `);
 
@@ -1612,7 +1612,7 @@ document.getElementById("zerothSelect").addEventListener("change", function () {
   if (saveBtn && !document.getElementById("cloNoteMsg")) {
     const note = document.createElement("div");
     note.id = "cloNoteMsg";
-    note.textContent = "Note: Once you have added all CLOs for current GA, select another GA by choosing an option in 'Select a GA to write a CLO for the course above'";
+    note.textContent = "Note: Once you have added all CLOs for current GA, select another GA by choosing an option in 'Choose a GA to Develop a CLO for this Course'";
     note.style.fontSize = "0.85rem";
     note.style.marginTop = "0.5rem";
     note.style.color = "#aa4a00";
@@ -1710,7 +1710,7 @@ document.getElementById("zerothSelect").addEventListener("change", function () {
   if (saveBtn && !document.getElementById("cloInstructionNote")) {
     const note = document.createElement("div");
     note.id = "cloInstructionNote";
-    note.textContent = "Note: (1) Once you have added all CLOs for current GA, select another GA by choosing an option in 'Select a GA to write a CLO for the course above.' (2) Ensure that you do not click this button twice for a single CLO; otherwise CLO might be duplicated.";
+    note.textContent = "Note: (1) Once you have added all CLOs for current GA, select another GA by choosing an option in 'Choose a GA to Develop a CLO for this Course.' (2) Ensure that you do not click this button twice for a single CLO; otherwise CLO might be duplicated.";
     note.style.fontSize = "0.85rem";
     note.style.marginTop = "0.5rem";
     note.style.color = "#b85c00";
