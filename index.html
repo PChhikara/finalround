@@ -613,23 +613,10 @@ function populateBroadGAs(category = "") {
   let allowedKeys = [];
 
   if (category === "1") {
-    allowedKeys = ["Knowledge/Understanding-Concept", "Knowledge/Understanding-Procedure", "Knowledge/Understanding-Linking Ideas"];
+    allowedKeys = ["Knowledge and Understanding", "Generic Learning Outcomes", "Application of Knowledge and Skills", "General, Tech, and Prof. Skills", "Constitutional, Humanistic, Ethical Values", "Employability and Entrepreneurship"];
   } else if (category === "2") {
-    allowedKeys = ["Skill-Task Completion", "Skill-Analyze", "Skill-Select/Evaluate"];
-  } else if (category === "3") {
-    allowedKeys = ["Application of Knowledge", "Application of Skill"];
-  } else if (category === "4") {
-    allowedKeys = ["Gen-Communication-Write/Oral/Read/Listen", "Gen-Critical/Judge/Responsibility", "Gen-IndependentLearning/IdentifyProblems"];
-} else if (category === "5") {
-    allowedKeys = ["Empl-Job readiness", "Empl-Group work", "Empl-Responsible for self-work"];
-  }
-else if (category === "6") {
-  allowedKeys = ["Ethic-Practice-Constitution/Human/Moral"];
-} else if (category === "7") {
-  allowedKeys = ["StudentContri-Asking Questions", "StudentContri-Group Tasks", "StudentContri-Risk Taking"];
-} else if (category === "8") {
-  allowedKeys = ["SubjectEvol-Over Time", "SubjectEvol-Human"];
-}
+    allowedKeys = ["Student Contribution", "Subject Evolution"];
+  } 
 
   Object.keys(gaOptions).forEach(ga => {
     if (!category || allowedKeys.includes(ga)) {
