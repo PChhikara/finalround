@@ -377,7 +377,7 @@ function updateSentenceStructure() {
       } else if (part.startsWith("[")) {
         const input = document.createElement("input");
         input.type = "text";
-      input.placeholder = "Write something about " + part.slice(1, -1);
+      input.placeholder = "" + part.slice(1, -1);
       input.style.width = "320px";
         container.appendChild(input);
       } else {
@@ -1314,7 +1314,7 @@ label.style.color = "#6f42c1";
       });
 
       const reminderSpan = document.createElement("span");
-reminderSpan.textContent = "  Click save button on the left below for each CLO.";
+reminderSpan.textContent = "  Do not forget clicking the save (purple) button on the left below for each CLO.";
 reminderSpan.style.color = "#d7263d";
 reminderSpan.style.fontWeight = "normal";
 reminderSpan.style.marginLeft = "1rem";
