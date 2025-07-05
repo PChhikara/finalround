@@ -188,12 +188,12 @@ const sentenceStructures = {
     verbs: ["apply", "perform", "demonstrate"]
   },
     "Knowledge/Understanding-Linking Ideas": {
-    template: ["Graduates will be able to", "[verb]", "key", "[concepts/theories/principles]", "in", "[disciplinary or multidisciplinary contexts]"],
-    verbs: ["understand", "demonstrate", "develop", "articulate"]
+    template: ["Graduates will be able to", "[verb]", "[concepts/theories/principles]", "in", "[disciplinary and, if relevant interdisciplinary contexts]"],
+    verbs: ["understand", "connect", "relate", "integrate"]
   },
   
 "Skill-Task Completion": {
-    template: ["Graduates will be able to", "[verb]", "[domain-specific tasks/operations]", "required in", "[disciplinary contexts]"],
+    template: ["Graduates will be able to", "[verb]", "[technical and cognitive tasks relevant to discipline and, if applicable, interdisciplinary contexts]", "such as", "[examples here.]"],
     verbs: ["perform", "carry out", "operate"]
   },
   
@@ -269,8 +269,8 @@ const sentenceStructures = {
   const calculusExamples = {
   "Knowledge/Understanding-Concept": "Graduates will be able to understand foundational mathematical concepts and principles of pure and applied mathematics.",
   "Knowledge/Understanding-Procedure": "Graduates will be able to apply standard mathematical procedures used in calculus, algebra, and computational mathematics.",
-  "Knowledge/Understanding-Linking Ideas": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
-  "Skill-Task Completion": "Graduates will be able to perform calculations and symbolic manipulations required in mathematical problem solving.",
+  "Knowledge/Understanding-Linking Ideas": "Graduates will be able to connect mathematical concepts across different branches of mathematics.",
+  "Skill-Task Completion": "Graduates will be able to perform technical tasks in mathematics such as solving equations, constructing mathematical models, and analyzing datasets using mathematical software.",
   "Skill-Analyze": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
   "Skill-Select/Evaluate": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
   "Application of Knowledge": "Graduates will be able to understand key mathematical concepts and theorems in pure and applied mathematics.",
@@ -506,20 +506,19 @@ const cloTemplates = {
     example: "Students will be able to solve problems involving derivatives using standard differentiation techniques."
   },
   "Knowledge/Understanding-Linking Ideas": {
-    verbs: ["write", "present", "discuss", "summarize", "interpret", "listen"],
-    template: ["Students will be able to", "[verb]", "[information/idea]", "in", "[mode/context]"],
-    example: "Students will be able to present problem-solving strategies in oral presentations during tutorial sessions."
+    verbs: ["compare", "contrast", "map", "associate", "synthesize"],
+    template: ["Students will be able to", "[verb]", "[two or more specific key ideas in the subject, and, if possible, interdisciplinary contexts]"],
+    example: "Students will be able to synthesize concepts of rates of change from calculus with their applications in population biology and economics."
   },
   "Skill-Task Completion": {
-    verbs: ["cooperate", "support", "present jointly", "negotiate"],
-    template: ["Students will be able to", "[verb]", "with peers to", "[team activity/goal]"],
-    example: "Students will be able to present jointly with peers a group solution to a multistep optimization problem."
+    verbs: ["use", "calculate", "build", "simulate", "follow"],
+    template: ["Students will be able to", "[verb]", "key procedural tasks related to", "[topic and, if relevant in interdisciplinary contextual problems.]"],
+    example: "Students will be able to calculate derivatives of trigonometric functions."
   },
   "Skill-Analyze": {
-    template: ["Graduates will be able to", "[verb]", "potential", "[risks or unintended effects]", "associated with", "[learning actions or decisions]"],
-    verbs: ["anticipate", "recognize", "acknowledge", "evaluate"],
-    template: ["Students will be able to", "[verb]", "with peers to", "[team activity/goal]"],
-    example: "Students will be able to present jointly with peers a group solution to a multistep optimization problem."
+    template: ["Students will be able to", "[verb]", "[discipline-specific problems, if relevant, in interdisciplinary contexts.]"],
+    verbs: ["break down", "differentiate", "interpret", "infer"],
+    example: "Students will be able to interpret the behavior of functions using first and second derivatives."
   },
   "Skill-Select/Evaluate": {
     verbs: ["identify", "describe", "analyze", "explain", "illustrate"],
