@@ -756,6 +756,40 @@ function displayCLOTemplate() {
 
       const cloLine = document.createElement("div");
       cloLine.className = "ga-line";
+function cleanPlaceholder(part) {
+  const p = part.slice(1, -1).trim();
+  const map = {
+    "particular key concepts/theories": "e.g. limits, continuity",
+    "mathematical topic in disciplinary or interdisciplinary contexts.": "e.g. calculus or physics",
+    "procedural techniques for solving problems related to the subject and, if possible, interdisciplinary contexts": "e.g. standard differentiation methods",
+    "two or more specific key ideas in the subject, and, if possible, interdisciplinary contexts": "e.g. limits and rates of change",
+    "technical and cognitive tasks relevant to discipline and, if applicable, interdisciplinary contexts": "e.g. calculating derivatives",
+    "discipline-specific problems, if relevant, in interdisciplinary contexts.": "e.g. curve sketching problems",
+    "individuals/cultures": "e.g. Indian and Arab mathematicians",
+    "subject/topic": "e.g. calculus",
+    "tools/techniques": "e.g. definite integrals",
+    "specific task": "e.g. calculating area",
+    "model/solution": "e.g. a population growth model",
+    "problem/task": "e.g. predicting future values",
+    "tasks/assignments": "e.g. written tests, oral presentations",
+    "professional/academic context": "e.g. classroom or workplace settings",
+    "ideas/problems": "e.g. assumptions in modeling",
+    "discussion/situation": "e.g. peer discussions",
+    "historical concepts": "e.g. development of derivatives",
+    "subject area": "e.g. mathematics or physics",
+    "ideas/concepts": "e.g. integration methods",
+    "disciplines/topics": "e.g. algebra and calculus",
+    "knowledge/approach": "e.g. integration methods",
+    "real/simulated context": "e.g. physics applications",
+    "learning goals/tasks": "e.g. mastering integration",
+    "course objective/context": "e.g. a final project",
+    "ethical/humanistic value": "e.g. fairness in prediction",
+    "decision/context": "e.g. using math in policy",
+    "group activity": "e.g. peer discussions",
+    "purpose": "e.g. create better understanding"
+  };
+  return map[p] || p;
+}
 
       cloTemplate.template.forEach(part => {
         if (part === "[verb]") {
