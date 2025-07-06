@@ -1309,12 +1309,11 @@ label.style.color = "#6f42c1";
           sentenceLine.appendChild(sel);
           inputs.push(sel);
         } else if (part.startsWith("[")) {
-          const input = document.createElement("input");
-          input.type = "text";
-          input.placeholder = "Write something...";
-          input.style.width = "280px";
-          sentenceLine.appendChild(input);
-          inputs.push(input);
+    const input = document.createElement("input");
+    input.type = "text";
+    input.placeholder = cleanPlaceholder(part);  // ✅ replaces "Write something..."
+    input.style.width = "280px";
+    cloLine.appendChild(input);
         } else {
           const span = document.createElement("span");
           span.textContent = part + " ";
