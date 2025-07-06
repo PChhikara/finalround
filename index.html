@@ -1042,6 +1042,16 @@ cloDisplay.appendChild(note);
 
       const sentenceLine = document.createElement("div");
       sentenceLine.className = "ga-line";
+const cleanPlaceholder = part => {
+  const p = part.slice(1, -1).trim();
+  const map = {
+    "particular key concepts/theories": "e.g. limits, continuity",
+    "mathematical topic in disciplinary or interdisciplinary contexts.": "e.g. calculus or physics",
+    "procedural techniques for solving problems related to subject and, if possible, interdisciplinary contexts": "e.g. standard differentiation methods"
+    // Add more as needed
+  };
+  return map[p] || p;
+};
 
       const inputs = [];
       template.template.forEach(part => {
@@ -1056,12 +1066,11 @@ cloDisplay.appendChild(note);
           sentenceLine.appendChild(sel);
           inputs.push(sel);
         } else if (part.startsWith("[")) {
-          const input = document.createElement("input");
-          input.type = "text";
-          input.placeholder = "Write something...";
-          input.style.width = "280px";
-          sentenceLine.appendChild(input);
-          inputs.push(input);
+    const input = document.createElement("input");
+    input.type = "text";
+    input.placeholder = cleanPlaceholder(part);  // ✅ replaces "Write something..."
+    input.style.width = "280px";
+    cloLine.appendChild(input);
         } else {
           const span = document.createElement("span");
           span.textContent = part + " ";
