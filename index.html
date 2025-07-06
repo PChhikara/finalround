@@ -768,11 +768,11 @@ function displayCLOTemplate() {
           });
           cloLine.appendChild(sel);
         } else if (part.startsWith("[")) {
-          const input = document.createElement("input");
-          input.type = "text";
-          input.placeholder = "Write something...";
-          input.style.width = "280px";
-          cloLine.appendChild(input);
+    const input = document.createElement("input");
+    input.type = "text";
+    input.placeholder = cleanPlaceholder(part);  // ✅ replaces "Write something..."
+    input.style.width = "280px";
+    cloLine.appendChild(input);
         } else {
           const span = document.createElement("span");
           span.textContent = part + " ";
