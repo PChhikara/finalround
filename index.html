@@ -1040,18 +1040,7 @@ cloDisplay.appendChild(note);
       const template = cloTemplates[subga];
       if (!template) return;
 
-      const sentenceLine = document.createElement("div");
-      sentenceLine.className = "ga-line";
-const cleanPlaceholder = part => {
-  const p = part.slice(1, -1).trim();
-  const map = {
-    "particular key concepts/theories": "e.g. limits, continuity",
-    "mathematical topic in disciplinary or interdisciplinary contexts.": "e.g. calculus or physics",
-    "procedural techniques for solving problems related to subject and, if possible, interdisciplinary contexts": "e.g. standard differentiation methods"
-    // Add more as needed
-  };
-  return map[p] || p;
-};
+     
 
       const inputs = [];
       template.template.forEach(part => {
